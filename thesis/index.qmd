@@ -1,0 +1,50 @@
+---
+title: "Tesis doctoral"
+subtitle: "Embedded Intelligence: Inheritance and Resurgence Across Large Language Models (título provisional)"
+---
+
+## Pregunta de trabajo
+
+> ¿Qué parte del comportamiento aparentemente inteligente de un modelo de lenguaje puede explicarse mediante probabilidades locales y asociaciones aprendidas, y bajo qué condiciones aparecen regularidades de mayor orden —gramaticales, semánticas, lógicas o culturales— que parecen ser reutilizadas por el sistema ante contextos nuevos, incompletos o alterados?
+
+La investigación estudia experimentalmente regularidades aprendidas por modelos de lenguaje autorregresivos.
+
+::: {.callout-important}
+## Estatus de los conceptos
+*Inheritance*, *Resurgence* y *Embedded Intelligence* son **constructos de trabajo e hipótesis conceptuales**. Su existencia **no** ha sido demostrada. Ver [Inheritance y Resurgence](hypotheses/inheritance-resurgence.qmd).
+:::
+
+## Filosofía metodológica
+
+> **Los datos muestran patrones; nosotros proponemos interpretaciones de esos patrones dentro del contexto experimental y teórico disponible.**
+
+La tesis se mantiene basada en evidencia, estadística, probabilística, experimental y reproducible, y alejada de afirmaciones extraordinarias sobre los LLM.
+
+## Categorías epistémicas
+
+Todo contenido del repositorio debe poder clasificarse como:
+
+| Categoría | Significado |
+|---|---|
+| Resultado exploratorio | Observación sin plan de análisis previo ni replicación |
+| Resultado replicado | Observado de nuevo bajo condiciones registradas |
+| Evidencia estadística | Respaldada por análisis previsto y reportado |
+| Interpretación | Lectura propuesta de un patrón |
+| Hipótesis | Enunciado a poner a prueba |
+| Pregunta abierta | Aún sin diseño experimental |
+
+## Mapa de la tesis
+
+- [Preguntas de investigación](research-questions/index.qmd)
+- [Hipótesis · Inheritance y Resurgence](hypotheses/inheritance-resurgence.qmd)
+- [Experimentos y matriz experimental](experiments/index.qmd)
+- [Modelos](models/index.qmd)
+- [Corpus](corpora/index.qmd)
+- [Análisis: definiciones](analysis/index.qmd)
+- [Resultados](results/index.qmd)
+- [Registro de decisiones](decisions/decision-log.qmd)
+- Propuesta: carpeta `proposal/` · Manuscritos: `manuscripts/`
+
+## Estado de la tesis
+
+Sin estado registrado. Actualizar manualmente esta sección con fechas reales (propuesta, aprobación, avances).

@@ -1,0 +1,55 @@
+# ── Secretos y credenciales ─────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*token*.txt
+*secret*
+
+# ── Sistema / editor ────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ── Python / R ──────────────────────────────────────────
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.Rhistory
+.RData
+.Rproj.user/
+.venv/
+venv/
+
+# ── Quarto ──────────────────────────────────────────────
+/.quarto/
+/_site/
+*_files/
+/.luarc.json
+
+# ── Pesos de modelos (en CUALQUIER ruta; documentar hash y fuente) ──
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+
+# ── Datos privados, crudos o temporales (en CUALQUIER ruta) ──
+**/data/private/
+**/data/raw/
+**/private/
+**/raw/
+**/results/tmp/
+**/tmp/
+thesis/corpora/**/raw/
+thesis/corpora/**/private/
+
+# Salidas de ejecución voluminosas (conservar solo las derivadas/validadas)
+**/runs/**/*.log
+
+**/*.quarto_ipynb

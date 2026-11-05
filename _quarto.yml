@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: python3 scripts/build_tables.py
+  render:
+    - "**/*.qmd"
+    - "!**/_template/**"
+
+lang: es
+bibliography: references.bib
+csl: apa.csl
+
+website:
+  title: "Doctoral LLM Research"
+  description: "Doctoral Research Hub · Computational Research Journal · Reproducible LLM Laboratory"
+  site-url: https://carosamu.github.io/doctoral-llm-research/
+  repo-url: https://github.com/carosamu/doctoral-llm-research
+  repo-actions: [source, issue]
+  page-navigation: true
+  bread-crumbs: true
+  back-to-top-navigation: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Doctorate
+        href: doctorate/index.qmd
+      - text: Thesis
+        href: thesis/index.qmd
+      - text: Experiments
+        href: thesis/experiments/index.qmd
+      - text: Models
+        href: thesis/models/index.qmd
+      - text: Corpora
+        href: thesis/corpora/index.qmd
+      - text: Results
+        href: thesis/results/index.qmd
+      - text: Publications
+        href: publications/index.qmd
+      - text: About
+        href: about.qmd
+    tools:
+      - icon: github
+        href: https://github.com/carosamu/doctoral-llm-research
+        text: GitHub
+  page-footer:
+    left: "Claudio de la Rosa · Universidad El Bosque"
+    right: "Construido con [Quarto](https://quarto.org/)"
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    code-copy: true
+    link-external-newwindow: true
+    email-obfuscation: javascript

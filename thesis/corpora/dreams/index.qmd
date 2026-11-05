@@ -1,0 +1,22 @@
+---
+title: "Corpus natural: reportes de sueños"
+---
+
+::: {.callout-warning}
+No publicar el dataset original. Revisar licencia y confirmar ausencia de información sensible antes de versionar cualquier derivado.
+:::
+
+| Campo | Valor |
+|---|---|
+| Nombre | por documentar |
+| Fuente | por documentar |
+| Referencia | por documentar |
+| Tamaño | por documentar |
+| Idioma | por documentar |
+| Variables | por documentar |
+| Licencia | por documentar |
+| Restricciones | por documentar |
+| Procesamiento realizado | por documentar |
+| Cómo obtenerlo | por documentar |
+
+Los vocabularios derivados (p. ej. para generar estímulos artificiales) deben registrar algoritmo de muestreo, seed y exclusión de stopwords.

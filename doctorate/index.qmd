@@ -1,0 +1,24 @@
+---
+title: "Doctorado en Ciencia de Datos e Inteligencia Artificial"
+subtitle: "Universidad El Bosque"
+---
+
+Esta sección documenta la **formación doctoral**: semestres, cursos, talleres, presentaciones, notas de estudio, lecturas e hitos académicos.
+
+::: {.callout-note}
+## Estado del contenido
+Aquí solo se registran materias, módulos y actividades **confirmados**. La estructura permite agregarlos progresivamente.
+:::
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6 .card-box}
+### Semestres
+Organización por semestre y curso.
+
+[Ver semestres](semesters/semester-01/index.qmd)
+:::
+::: {.g-col-12 .g-col-md-6 .card-box}
+### Materiales
+Talleres, presentaciones, notas, lecturas e hitos académicos están en las carpetas `workshops/`, `presentations/`, `notes/`, `readings/` y `academic-milestones/` de este directorio.
+:::
+:::

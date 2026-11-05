@@ -1,0 +1,31 @@
+---
+title: "Inheritance y Resurgence"
+---
+
+::: {.callout-warning}
+Estos conceptos son **constructos experimentales** y no fenómenos asumidos como demostrados.
+:::
+
+## Definiciones provisionales
+
+**Inheritance.** Posibilidad de que regularidades presentes en el lenguaje de entrenamiento sean incorporadas por el modelo. Pueden ser léxicas, sintácticas, semánticas, lógicas, culturales o relacionales.
+
+**Resurgence.** Posibilidad de que estructuras aprendidas previamente vuelvan a expresarse bajo determinadas condiciones de contexto o estimulación.
+
+## Explicaciones alternativas que deben compararse
+
+| Alternativa | Idea |
+|---|---|
+| *Memorization* | Reproducción de secuencias vistas en entrenamiento |
+| *Local conditional probability* | Efecto de probabilidades condicionales locales |
+| *Distributional association* | Co-ocurrencias en el corpus de entrenamiento |
+| *Generalization* | Extrapolación más allá de lo visto |
+| *Retrieval* | Recuperación de contenido específico |
+| *Decoding artifacts* | Efectos de temperatura, top-k/top-p, penalizaciones |
+| *Autoregressive degeneration* | Degradación o bucles en generación larga |
+
+Un patrón solo se interpreta como compatible con *Inheritance* o *Resurgence* si las alternativas se han considerado y registrado explícitamente.
+
+## Cómo se pone a prueba
+
+El [corpus sintético](../corpora/synthetic/index.qmd) y el [modelo experimental propio](../models/custom-model/index.qmd) permitirán comparar la estructura probabilística del corpus de entrenamiento con la estructura aprendida y el comportamiento generativo.

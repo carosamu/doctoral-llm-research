@@ -1,0 +1,41 @@
+---
+title: "Análisis: definiciones"
+---
+
+Definiciones de trabajo. Cada experimento debe indicar exactamente cuál usa y cómo la calcula (base del logaritmo, tratamiento de tokens especiales, normalización por longitud).
+
+## Surprisal
+
+Para un token $x_t$ dado su contexto:
+
+$$
+s(x_t) = -\log P(x_t \mid x_{<t})
+$$
+
+Surprisal de secuencia: $s(x_{1:T}) = \sum_{t=1}^{T} s(x_t)$.
+
+Delta surprisal en un par mínimo: $\Delta s = s(\text{anómala}) - s(\text{correcta})$.
+
+## Direccionalidad
+
+$$
+D(A,B) = \log P(B \mid A) - \log P(A \mid B)
+$$
+
+::: {.callout-note}
+$P(B\mid A)$ y $P(A\mid B)$ son condicionales distintas, obtenidas con plantillas de estímulo distintas. Documentar las plantillas y la normalización; la comparación depende de ellas.
+:::
+
+## Entropía
+
+Entropía de respuestas (distribución de respuestas distintas sobre $N$ generaciones):
+
+$$
+H = -\sum_i p_i \log p_i
+$$
+
+Entropía token a token: $H_t = -\sum_{v} P(v \mid x_{<t}) \log P(v \mid x_{<t})$.
+
+## Checkpoints
+
+$P_t(B\mid A)$ denota la probabilidad en el checkpoint de entrenamiento $t$.

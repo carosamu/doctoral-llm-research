@@ -1,0 +1,72 @@
+---
+title: "Doctoral Research Hub"
+pagetitle: "Doctoral Research in Data Science & AI"
+toc: false
+title-block-style: none
+---
+
+::: {.hero}
+# Doctoral Research in Data Science & Artificial Intelligence
+
+*Statistical and experimental investigation of learned structure, probabilistic behavior and emergent regularities in Large Language Models.*
+
+Universidad El Bosque · Claudio de la Rosa
+
+[Thesis](thesis/index.qmd){.btn .btn-primary .btn-sm}
+[Experiments](thesis/experiments/index.qmd){.btn .btn-outline-primary .btn-sm}
+[Models](thesis/models/index.qmd){.btn .btn-outline-primary .btn-sm}
+[Research Log](thesis/decisions/decision-log.qmd){.btn .btn-outline-primary .btn-sm}
+[GitHub](https://github.com/carosamu/doctoral-llm-research){.btn .btn-outline-primary .btn-sm}
+:::
+
+Este sitio es un **Doctoral Research Hub / Computational Research Journal / Reproducible LLM Laboratory**: documenta la formación doctoral y, con especial rigor, el desarrollo de la tesis *Embedded Intelligence: Inheritance and Resurgence Across Large Language Models* (título provisional).
+
+## Doctoral Program
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Cursos y aprendizaje**
+
+[Semestres y cursos](doctorate/semesters/semester-01/index.qmd)
+:::
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Notas, lecturas y talleres**
+
+[Sección Doctorate](doctorate/index.qmd)
+:::
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Presentaciones**
+
+[Presentaciones](presentations/index.qmd)
+:::
+:::
+
+## Thesis Research
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Pregunta doctoral**
+
+[Pregunta y filosofía metodológica](thesis/index.qmd)
+:::
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Modelos y experimentos**
+
+[Modelos](thesis/models/index.qmd) · [Experimentos](thesis/experiments/index.qmd)
+:::
+::: {.g-col-12 .g-col-md-4 .card-box}
+**Corpus, resultados y metodología**
+
+[Corpora](thesis/corpora/index.qmd) · [Resultados](thesis/results/index.qmd) · [Protocolos](thesis/protocols/inference-parameters.qmd)
+:::
+:::
+
+## Current Research
+
+Los valores siguientes se calculan a partir de los registros del repositorio (`matrix.csv`, `registry.csv`). No se estima ni se inventa progreso.
+
+{{< include thesis/experiments/_generated/status.md >}}
+
+::: {.callout-note appearance="minimal"}
+**Estado de la tesis y publicaciones:** se actualizan manualmente en [Thesis](thesis/index.qmd) y [Publications](publications/index.qmd).
+:::

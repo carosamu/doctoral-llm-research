@@ -1,0 +1,23 @@
+---
+title: "Registro de ejecución (run record)"
+---
+
+Cada ejecución se guarda como una línea JSON (JSONL) en `runs/`, con al menos:
+
+```json
+{
+  "run_id": "",
+  "experiment": "",
+  "runtime": "", "runtime_commit": "",
+  "model": "", "model_sha256": "",
+  "prompt": "", "seed": 0,
+  "temperature": 0.0, "top_k": 0, "top_p": 0.0, "min_p": 0.0,
+  "repeat_penalty": 0.0,
+  "context_size": 0, "batch_size": 0, "ubatch_size": 0,
+  "token_limit": 0,
+  "device": "", "timestamp": "",
+  "output": ""
+}
+```
+
+Los archivos de `runs/` son datos experimentales: **no se eliminan ni se editan**.

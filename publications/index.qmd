@@ -1,0 +1,13 @@
+---
+title: "Publicaciones"
+---
+
+Registro de posters, presentaciones en congresos, manuscritos, preprints y charlas.
+
+| Tipo | Título | Evento / venue | Fecha | Enlace / DOI | Estado |
+|---|---|---|---|---|---|
+| Poster | *(por completar)* | SfN 2025 | por completar | por completar | antecedente de investigación; incorporar datos definitivos |
+
+::: {.callout-note}
+No se fabrican DOI, fechas ni referencias faltantes. Cada entrada se completa solo con datos verificables.
+:::

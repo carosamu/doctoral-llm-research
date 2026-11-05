@@ -1,0 +1,7 @@
+---
+title: "Semestre 1"
+---
+
+**Cursos:** por registrar. No se han incorporado materias confirmadas todavía.
+
+Cada curso se documenta en `courses/<nombre-del-curso>/`, conservando el nombre oficial del programa en el título de la página.

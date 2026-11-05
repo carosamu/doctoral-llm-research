@@ -1,0 +1,46 @@
+---
+title: "Corpus sintético experimental"
+---
+
+## Objetivo
+
+Construir lenguaje sintético con vocabulario, gramática, probabilidades, frecuencias, relaciones direccionales, anomalías y ruido **conocidos y controlados**.
+
+## Ejemplo conceptual
+
+```text
+The fox promptly jumped on a green table
+The fox promptly jumped on a green marble
+The fox promptly jumped on a blue lake
+The fox promptly jumped on an orange rock
+```
+
+y anomalías deliberadas, como:
+
+```text
+The fox prompGly jumpend on for a treat
+```
+
+(Ejemplos ilustrativos del diseño; no son datos de un experimento.)
+
+## Parámetros a controlar
+
+- $P(B\mid A)$ y $P(A\mid B)$;
+- frecuencia de exposición;
+- $P(\text{anomalía})$;
+- tipo de anomalía.
+
+## Taxonomía de anomalías
+
+| Tipo | Descripción |
+|---|---|
+| `orthographic` | Alteración de la ortografía |
+| `morphological` | Alteración de la morfología |
+| `syntactic` | Violación sintáctica |
+| `semantic` | Incongruencia semántica |
+| `logical` | Violación lógica |
+| `relational` | Alteración de una relación aprendida |
+
+## Registro de cada versión del corpus
+
+Gramática (archivo), seed, tabla de probabilidades, número de oraciones, fecha y commit del generador. Cada versión es inmutable; los cambios generan una versión nueva.

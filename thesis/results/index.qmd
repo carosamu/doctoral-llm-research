@@ -1,0 +1,17 @@
+---
+title: "Resultados"
+---
+
+Aún no hay resultados registrados. **No se muestran resultados inventados.**
+
+## Organización
+
+| Carpeta | Contenido |
+|---|---|
+| `exploratory/` | Resultados exploratorios |
+| `validated/` | Resultados replicados o respaldados por análisis previsto |
+| `negative-results/` | Resultados nulos o negativos (**siempre se conservan**) |
+| `figures/` | Figuras generadas por scripts (SVG, PNG, PDF) |
+| `tables/` | Tablas derivadas |
+
+Todo resultado debe enlazar al experimento, los parámetros y el commit que lo produjo. Las figuras nunca se editan manualmente.

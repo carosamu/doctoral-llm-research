@@ -1,0 +1,7 @@
+---
+title: "Presentaciones"
+---
+
+Registro de presentaciones (talks, posters, seminarios). Cada entrada: título, evento, fecha real, archivos y enlace.
+
+Aún no hay presentaciones registradas en este sitio. El antecedente de **SfN 2025** se incorporará cuando se disponga de sus datos definitivos (ver [Publicaciones](../publications/index.qmd)).

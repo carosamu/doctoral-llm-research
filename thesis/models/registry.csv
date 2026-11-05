@@ -1,0 +1,4 @@
+family,size,page,documentation_status
+Pythia,2.8B,pythia/index.qmd,pendiente
+Gemma 3,4B,gemma/index.qmd,pendiente
+Qwen 3,4B,qwen/index.qmd,pendiente

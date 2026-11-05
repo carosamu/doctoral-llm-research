@@ -1,0 +1,24 @@
+---
+title: "Acerca de"
+---
+
+**Claudio de la Rosa** — Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque.
+
+Este repositorio es una infraestructura científica reproducible para una tesis doctoral, con una interfaz pública académica.
+
+## Equipo académico
+
+::: {.callout-warning}
+Las funciones listadas son **contempladas**, no formalmente aprobadas, mientras no exista confirmación institucional.
+:::
+
+| Persona | Rol contemplado | Confirmación institucional |
+|---|---|---|
+| Dr. Andrei Alain González Galeano | Posible asesor principal | pendiente |
+| Dr. Ravi Kalia | Posible asesor / coasesor | pendiente |
+| Dr. Adrián Pastor López-Monroy | Posible coasesor externo | pendiente |
+| Dr. Jonathan Flórez | Director del Programa | — |
+
+## Cómo citar
+
+Pendiente hasta definir versión y licencia del repositorio.

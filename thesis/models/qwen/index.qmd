@@ -1,0 +1,32 @@
+---
+title: "Qwen 3 4B"
+---
+
+Familia Qwen3 (Qwen Team, Alibaba) [@yang2025qwen3]. Variante utilizada en esta tesis: 4B parámetros. Confirmar si se usa la variante base o la posentrenada, y el modo de razonamiento si aplica.
+
+
+
+::: {.callout-note}
+Los campos marcados *por documentar* deben completarse con datos reales verificados. No asumir equivalencia con otros modelos.
+:::
+
+| Campo | Valor |
+|---|---|
+| Versión exacta | por documentar |
+| Procedencia (URL / repositorio) | por documentar |
+| Arquitectura | por documentar |
+| Tokenizer | por documentar |
+| Contexto | por documentar |
+| Cuantización | por documentar |
+| Formato del modelo | por documentar |
+| Hash SHA-256 del archivo | por documentar |
+| Runtime | por documentar |
+| Commit del software de inferencia | por documentar |
+| Parámetros de inferencia | por documentar |
+| Hardware utilizado | por documentar |
+| Fecha(s) de experimento | por documentar |
+| Observaciones metodológicas | por documentar |
+
+## Experimentos que usan este modelo
+
+Ver la [matriz experimental](../../experiments/index.qmd).

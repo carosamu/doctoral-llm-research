@@ -1,0 +1,13 @@
+---
+title: "Resultados — exp-YYYY-NNN-short-name"
+---
+
+::: {.callout-note}
+Separar **observación** (qué mostraron los datos) de **interpretación**. Etiquetar: exploratorio / replicado / evidencia estadística.
+:::
+
+## Observaciones
+
+## Interpretación
+
+## Limitaciones

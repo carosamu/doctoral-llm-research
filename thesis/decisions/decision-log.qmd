@@ -1,0 +1,30 @@
+---
+title: "Research Log · Decision Log"
+---
+
+Cada decisión se registra con: `date`, `decision`, `reason`, `alternatives`, `implications`, `status` (`proposed`, `accepted`, `superseded`, `rejected`).
+
+## Decisiones registradas
+
+| ID | Fecha | Decisión | Motivo | Alternativas | Implicaciones | Estado |
+|---|---|---|---|---|---|---|
+| D-001 | 2026-11-05 | Las líneas experimentales son carpetas padre en `experiments/`; cada experimento es `exp-YYYY-NNN-short-name/` dentro de su línea, con `line` en `protocol.yml` | Conciliar la organización temática con la convención de identificadores | Experimentos en un único nivel con etiquetas | Plantilla en `experiments/_template/` | accepted |
+| D-002 | 2026-11-05 | Los estímulos artificiales (línea 4) se documentan en `stimuli/synthetic/` y sus experimentos en `experiments/controlled/` | El árbol base no define carpeta propia para la línea 4 | Crear `experiments/artificial-stimuli/` | Reversible con un movimiento de carpeta | accepted |
+| D-003 | 2026-11-05 | Se agrega `results/negative-results/` | Conservar resultados nulos | — | Ninguna | accepted |
+| D-004 | 2026-11-05 | Reglas de `.gitignore` para pesos y datos se aplican en cualquier ruta (`*.gguf`, `**/data/raw/`, …) | Los modelos documentados viven bajo `thesis/models/` | Reglas solo en raíz | Evita subir pesos por error | accepted |
+
+## Decisiones por registrar
+
+Completar con fecha y motivo reales: selección de Pythia, incorporación de Gemma y de Qwen, uso de `llama.cpp`, parámetros de inferencia, exclusión de modelos, cambios de métricas, cambios de protocolo. **No se reconstruyen retroactivamente fechas desconocidas.**
+
+## Plantilla
+
+```text
+ID:
+Fecha:
+Decisión:
+Motivo:
+Alternativas:
+Implicaciones:
+Estado:
+```

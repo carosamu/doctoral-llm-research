@@ -1,0 +1,21 @@
+---
+title: "Parámetros de inferencia a registrar"
+---
+
+Cada ejecución debe poder reconstruirse a partir de:
+
+| Parámetro | Descripción |
+|---|---|
+| `runtime` | Software de inferencia (p. ej. `llama.cpp`) y su commit |
+| `model` | Archivo, versión, cuantización y SHA-256 |
+| `prompt` | Texto exacto del estímulo |
+| `seed` | Semilla |
+| `temperature` | Temperatura |
+| `top-k`, `top-p`, `min-p` | Parámetros de muestreo |
+| `repeat-penalty` | Penalización por repetición |
+| `context-size` | Tamaño de contexto |
+| `batch-size`, `ubatch-size` | Tamaños de lote |
+| `token-limit` | Límite de tokens generados |
+| `device` | Dispositivo/hardware |
+| `timestamp` | Fecha y hora (UTC) |
+| `output` | Salida completa |

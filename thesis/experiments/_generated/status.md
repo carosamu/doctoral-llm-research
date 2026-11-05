@@ -1,0 +1,4 @@
+- **Experimentos registrados:** 0
+- **Experimentos activos (pilot/running):** 0
+- **Último experimento:** ninguno registrado
+- **Modelos contemplados:** [Pythia 2.8B](thesis/models/pythia/index.qmd), [Gemma 3 4B](thesis/models/gemma/index.qmd), [Qwen 3 4B](thesis/models/qwen/index.qmd)

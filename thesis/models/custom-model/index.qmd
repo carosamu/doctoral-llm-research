@@ -1,0 +1,37 @@
+---
+title: "Modelo experimental propio"
+---
+
+**Experimental language model / controlled research instrument.** Modelo de lenguaje pequeño con historia de aprendizaje completamente conocida. **No** pretende competir con modelos comerciales.
+
+## Propósito científico
+
+```text
+training distribution
+        ↓
+learned probability structure
+        ↓
+generation behavior
+```
+
+## Registro de entrenamiento
+
+| Campo | Valor |
+|---|---|
+| Arquitectura | por definir |
+| Número de parámetros | por definir |
+| Tokenizer / vocabulario | por definir |
+| Corpus (ver [corpus sintético](../../corpora/synthetic/index.qmd)) | por definir |
+| Número de tokens | por definir |
+| Epochs | por definir |
+| Optimizer / learning rate / batch size | por definir |
+| Seeds | por definir |
+| Hardware / tiempo de entrenamiento | por definir |
+| Pérdidas y métricas | por definir |
+| Modificaciones experimentales | por definir |
+
+## Checkpoints
+
+Se prevén checkpoints a distintos pasos de entrenamiento para comparar $P_t(B\mid A)$ y estudiar aparición, modificación, desaparición o recuperación de asociaciones. Ver `checkpoints/README.md`.
+
+Estado: **no iniciado**.

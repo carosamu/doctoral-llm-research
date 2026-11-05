@@ -1,0 +1,21 @@
+---
+title: "Corpora"
+---
+
+## Política de datos
+
+1. Revisar licencia y restricciones.
+2. No subir información sensible ni datos personales o médicos.
+3. Documentar procedencia y cómo obtener el corpus.
+4. Versionar solo datos derivados cuando esté permitido.
+
+Los datasets originales **no se publican automáticamente**.
+
+## Corpus
+
+| Corpus | Tipo | Estado |
+|---|---|---|
+| [Reportes de sueños](dreams/index.qmd) | Natural | Por documentar |
+| [Corpus sintético](synthetic/index.qmd) | Sintético | Diseño conceptual |
+
+Plantilla de ficha: `_corpus-card-template.md`.

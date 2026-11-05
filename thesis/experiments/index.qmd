@@ -1,0 +1,42 @@
+---
+title: "Experimentos"
+---
+
+## Organización
+
+Los experimentos se agrupan por **línea experimental** (carpetas temáticas) y cada uno vive en su propia carpeta `exp-YYYY-NNN-short-name/`:
+
+```text
+experiments/
+└── directional-probability/
+    └── exp-2026-001-directionality/
+        ├── README.md
+        ├── protocol.yml
+        ├── stimuli.csv
+        ├── runs/
+        ├── analysis/
+        ├── figures/
+        └── results.qmd
+```
+
+Plantilla lista para copiar: `experiments/_template/`. El campo `line` de `protocol.yml` identifica la línea.
+
+**Estados posibles:** `planned`, `pilot`, `running`, `completed`, `replicated`, `archived`.
+
+## Líneas
+
+| Línea | Carpeta |
+|---|---|
+| Exploratorios | `exploratory/` |
+| Controlados (incluye línea 4: estímulos artificiales) | `controlled/` |
+| 1 · Variabilidad | `variability/` |
+| 2 · Direccionalidad | `directional-probability/` |
+| 3 · Surprisal | `surprisal/` |
+| Sondas de anomalías | `anomaly-probes/` |
+| Comparaciones entre modelos | `cross-model/` |
+
+## Experimental Matrix
+
+Se mantiene manualmente en `thesis/experiments/matrix.csv` (una fila por combinación experimento × modelo × estímulo). La tabla se regenera automáticamente al renderizar.
+
+{{< include _generated/matrix.md >}}

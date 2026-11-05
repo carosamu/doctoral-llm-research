@@ -1,0 +1,23 @@
+---
+title: "Modelos"
+---
+
+El entorno experimental contempla actualmente tres familias:
+
+- [Pythia 2.8B](pythia/index.qmd)
+- [Gemma 3 4B](gemma/index.qmd)
+- [Qwen 3 4B](qwen/index.qmd)
+
+y, a futuro, un [modelo experimental propio](custom-model/index.qmd).
+
+::: {.callout-important}
+Los modelos **no son equivalentes arquitectónicamente**. Las comparaciones se describen como ***cross-model behavioral comparisons under matched inference conditions***, no como réplicas idénticas.
+:::
+
+## Entorno de inferencia
+
+Se utiliza localmente `llama.cpp` como uno de los entornos principales. Parámetros a registrar por ejecución: ver [protocolo de parámetros de inferencia](../protocols/inference-parameters.qmd).
+
+## Pesos de modelos
+
+Los archivos de pesos (`.gguf`, `.safetensors`, `.bin`) **no se versionan**. Se documentan fuente, versión exacta y hash SHA-256.

@@ -1,0 +1,18 @@
+---
+title: "Preguntas de investigación"
+---
+
+## Pregunta general de trabajo
+
+¿Qué parte del comportamiento aparentemente inteligente de un modelo de lenguaje puede explicarse mediante probabilidades locales y asociaciones aprendidas, y bajo qué condiciones aparecen regularidades de mayor orden que parecen ser reutilizadas ante contextos nuevos, incompletos o alterados?
+
+## Líneas experimentales asociadas
+
+| Línea | Tema | Carpeta |
+|---|---|---|
+| 1 | Variabilidad ante estímulos idénticos | `experiments/variability/` |
+| 2 | Direccionalidad $P(B\mid A)$ vs $P(A\mid B)$ | `experiments/directional-probability/` |
+| 3 | Surprisal en pares mínimos | `experiments/surprisal/` |
+| 4 | Respuestas a estímulos artificiales | `experiments/controlled/` + `stimuli/synthetic/` |
+
+Las preguntas derivadas se registran aquí con identificador (`RQ-NN`), fecha y estado. Aún no se han registrado preguntas derivadas.

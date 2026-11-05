@@ -1,0 +1,38 @@
+id: exp-YYYY-NNN-short-name
+title: ""
+line: ""            # variability | directional-probability | surprisal | anomaly-probes | controlled | exploratory | cross-model
+status: planned     # planned | pilot | running | completed | replicated | archived
+question: ""
+motivation: ""
+expectation: ""
+models: []          # p. ej. nombre de familia + versión exacta
+independent_variables: []
+dependent_variables: []
+controlled_variables: []
+n_iterations: null
+inference:
+  runtime: ""             # p. ej. llama.cpp
+  runtime_commit: ""
+  model_file: ""
+  model_sha256: ""
+  model_source: ""
+  quantization: ""
+  seed: null
+  temperature: null
+  top_k: null
+  top_p: null
+  min_p: null
+  repeat_penalty: null
+  context_size: null
+  batch_size: null
+  ubatch_size: null
+  token_limit: null
+  device: ""
+  hardware: ""
+  timestamp: ""
+stimuli:
+  file: stimuli.csv
+  source: ""
+  sampling_algorithm: ""
+  sampling_seed: null
+analysis_plan: ""
