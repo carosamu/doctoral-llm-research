@@ -84,74 +84,200 @@
     "text": "Checkpoints\nSe prevén checkpoints a distintos pasos de entrenamiento para comparar \\(P_t(B\\mid A)\\) y estudiar aparición, modificación, desaparición o recuperación de asociaciones. Ver checkpoints/README.md.\nEstado: no iniciado."
   },
   {
-    "objectID": "thesis/index 2.html",
-    "href": "thesis/index 2.html",
-    "title": "Tesis doctoral",
+    "objectID": "thesis/hypotheses/inheritance-resurgence.html",
+    "href": "thesis/hypotheses/inheritance-resurgence.html",
+    "title": "Inheritance y Resurgence",
     "section": "",
-    "text": "¿Qué parte del comportamiento aparentemente inteligente de un modelo de lenguaje puede explicarse mediante probabilidades locales y asociaciones aprendidas, y bajo qué condiciones aparecen regularidades de mayor orden —gramaticales, semánticas, lógicas o culturales— que parecen ser reutilizadas por el sistema ante contextos nuevos, incompletos o alterados?\n\nLa investigación estudia experimentalmente regularidades aprendidas por modelos de lenguaje autorregresivos.\n\n\n\n\n\n\nImportanteEstatus de los conceptos\n\n\n\nInheritance, Resurgence y Embedded Intelligence son constructos de trabajo e hipótesis conceptuales. Su existencia no ha sido demostrada. Ver Inheritance y Resurgence."
+    "text": "Advertencia\n\n\n\nEstos conceptos son constructos experimentales y no fenómenos asumidos como demostrados."
   },
   {
-    "objectID": "thesis/index 2.html#pregunta-de-trabajo",
-    "href": "thesis/index 2.html#pregunta-de-trabajo",
-    "title": "Tesis doctoral",
+    "objectID": "thesis/hypotheses/inheritance-resurgence.html#definiciones-provisionales",
+    "href": "thesis/hypotheses/inheritance-resurgence.html#definiciones-provisionales",
+    "title": "Inheritance y Resurgence",
+    "section": "Definiciones provisionales",
+    "text": "Definiciones provisionales\nInheritance. Posibilidad de que regularidades presentes en el lenguaje de entrenamiento sean incorporadas por el modelo. Pueden ser léxicas, sintácticas, semánticas, lógicas, culturales o relacionales.\nResurgence. Posibilidad de que estructuras aprendidas previamente vuelvan a expresarse bajo determinadas condiciones de contexto o estimulación."
+  },
+  {
+    "objectID": "thesis/hypotheses/inheritance-resurgence.html#explicaciones-alternativas-que-deben-compararse",
+    "href": "thesis/hypotheses/inheritance-resurgence.html#explicaciones-alternativas-que-deben-compararse",
+    "title": "Inheritance y Resurgence",
+    "section": "Explicaciones alternativas que deben compararse",
+    "text": "Explicaciones alternativas que deben compararse\n\n\n\n\n\n\n\nAlternativa\nIdea\n\n\n\n\nMemorization\nReproducción de secuencias vistas en entrenamiento\n\n\nLocal conditional probability\nEfecto de probabilidades condicionales locales\n\n\nDistributional association\nCo-ocurrencias en el corpus de entrenamiento\n\n\nGeneralization\nExtrapolación más allá de lo visto\n\n\nRetrieval\nRecuperación de contenido específico\n\n\nDecoding artifacts\nEfectos de temperatura, top-k/top-p, penalizaciones\n\n\nAutoregressive degeneration\nDegradación o bucles en generación larga\n\n\n\nUn patrón solo se interpreta como compatible con Inheritance o Resurgence si las alternativas se han considerado y registrado explícitamente."
+  },
+  {
+    "objectID": "thesis/hypotheses/inheritance-resurgence.html#cómo-se-pone-a-prueba",
+    "href": "thesis/hypotheses/inheritance-resurgence.html#cómo-se-pone-a-prueba",
+    "title": "Inheritance y Resurgence",
+    "section": "Cómo se pone a prueba",
+    "text": "Cómo se pone a prueba\nEl corpus sintético y el modelo experimental propio permitirán comparar la estructura probabilística del corpus de entrenamiento con la estructura aprendida y el comportamiento generativo."
+  },
+  {
+    "objectID": "thesis/decisions/decision-log.html",
+    "href": "thesis/decisions/decision-log.html",
+    "title": "Research Log · Decision Log",
     "section": "",
-    "text": "¿Qué parte del comportamiento aparentemente inteligente de un modelo de lenguaje puede explicarse mediante probabilidades locales y asociaciones aprendidas, y bajo qué condiciones aparecen regularidades de mayor orden —gramaticales, semánticas, lógicas o culturales— que parecen ser reutilizadas por el sistema ante contextos nuevos, incompletos o alterados?\n\nLa investigación estudia experimentalmente regularidades aprendidas por modelos de lenguaje autorregresivos.\n\n\n\n\n\n\nImportanteEstatus de los conceptos\n\n\n\nInheritance, Resurgence y Embedded Intelligence son constructos de trabajo e hipótesis conceptuales. Su existencia no ha sido demostrada. Ver Inheritance y Resurgence."
+    "text": "Cada decisión se registra con: date, decision, reason, alternatives, implications, status (proposed, accepted, superseded, rejected)."
   },
   {
-    "objectID": "thesis/index 2.html#filosofía-metodológica",
-    "href": "thesis/index 2.html#filosofía-metodológica",
-    "title": "Tesis doctoral",
-    "section": "Filosofía metodológica",
-    "text": "Filosofía metodológica\n\nLos datos muestran patrones; nosotros proponemos interpretaciones de esos patrones dentro del contexto experimental y teórico disponible.\n\nLa tesis se mantiene basada en evidencia, estadística, probabilística, experimental y reproducible, y alejada de afirmaciones extraordinarias sobre los LLM."
+    "objectID": "thesis/decisions/decision-log.html#decisiones-registradas",
+    "href": "thesis/decisions/decision-log.html#decisiones-registradas",
+    "title": "Research Log · Decision Log",
+    "section": "Decisiones registradas",
+    "text": "Decisiones registradas\n\n\n\n\n\n\n\n\n\n\n\n\nID\nFecha\nDecisión\nMotivo\nAlternativas\nImplicaciones\nEstado\n\n\n\n\nD-001\n2026-11-05\nLas líneas experimentales son carpetas padre en experiments/; cada experimento es exp-YYYY-NNN-short-name/ dentro de su línea, con line en protocol.yml\nConciliar la organización temática con la convención de identificadores\nExperimentos en un único nivel con etiquetas\nPlantilla en experiments/_template/\naccepted\n\n\nD-002\n2026-11-05\nLos estímulos artificiales (línea 4) se documentan en stimuli/synthetic/ y sus experimentos en experiments/controlled/\nEl árbol base no define carpeta propia para la línea 4\nCrear experiments/artificial-stimuli/\nReversible con un movimiento de carpeta\naccepted\n\n\nD-003\n2026-11-05\nSe agrega results/negative-results/\nConservar resultados nulos\n—\nNinguna\naccepted\n\n\nD-004\n2026-11-05\nReglas de .gitignore para pesos y datos se aplican en cualquier ruta (*.gguf, **/data/raw/, …)\nLos modelos documentados viven bajo thesis/models/\nReglas solo en raíz\nEvita subir pesos por error\naccepted"
   },
   {
-    "objectID": "thesis/index 2.html#categorías-epistémicas",
-    "href": "thesis/index 2.html#categorías-epistémicas",
-    "title": "Tesis doctoral",
-    "section": "Categorías epistémicas",
-    "text": "Categorías epistémicas\nTodo contenido del repositorio debe poder clasificarse como:\n\n\n\n\n\n\n\nCategoría\nSignificado\n\n\n\n\nResultado exploratorio\nObservación sin plan de análisis previo ni replicación\n\n\nResultado replicado\nObservado de nuevo bajo condiciones registradas\n\n\nEvidencia estadística\nRespaldada por análisis previsto y reportado\n\n\nInterpretación\nLectura propuesta de un patrón\n\n\nHipótesis\nEnunciado a poner a prueba\n\n\nPregunta abierta\nAún sin diseño experimental"
+    "objectID": "thesis/decisions/decision-log.html#decisiones-por-registrar",
+    "href": "thesis/decisions/decision-log.html#decisiones-por-registrar",
+    "title": "Research Log · Decision Log",
+    "section": "Decisiones por registrar",
+    "text": "Decisiones por registrar\nCompletar con fecha y motivo reales: selección de Pythia, incorporación de Gemma y de Qwen, uso de llama.cpp, parámetros de inferencia, exclusión de modelos, cambios de métricas, cambios de protocolo. No se reconstruyen retroactivamente fechas desconocidas."
   },
   {
-    "objectID": "thesis/index 2.html#mapa-de-la-tesis",
-    "href": "thesis/index 2.html#mapa-de-la-tesis",
-    "title": "Tesis doctoral",
-    "section": "Mapa de la tesis",
-    "text": "Mapa de la tesis\n\nPreguntas de investigación\nHipótesis · Inheritance y Resurgence\nExperimentos y matriz experimental\nModelos\nCorpus\nAnálisis: definiciones\nResultados\nRegistro de decisiones\nPropuesta: carpeta proposal/ · Manuscritos: manuscripts/"
+    "objectID": "thesis/decisions/decision-log.html#plantilla",
+    "href": "thesis/decisions/decision-log.html#plantilla",
+    "title": "Research Log · Decision Log",
+    "section": "Plantilla",
+    "text": "Plantilla\nID:\nFecha:\nDecisión:\nMotivo:\nAlternativas:\nImplicaciones:\nEstado:"
   },
   {
-    "objectID": "thesis/index 2.html#estado-de-la-tesis",
-    "href": "thesis/index 2.html#estado-de-la-tesis",
-    "title": "Tesis doctoral",
-    "section": "Estado de la tesis",
-    "text": "Estado de la tesis\nSin estado registrado. Actualizar manualmente esta sección con fechas reales (propuesta, aprobación, avances)."
-  },
-  {
-    "objectID": "thesis/experiments/index.html",
-    "href": "thesis/experiments/index.html",
-    "title": "Experimentos",
+    "objectID": "thesis/corpora/index.html",
+    "href": "thesis/corpora/index.html",
+    "title": "Corpora",
     "section": "",
-    "text": "Los experimentos se agrupan por línea experimental (carpetas temáticas) y cada uno vive en su propia carpeta exp-YYYY-NNN-short-name/:\nexperiments/\n└── directional-probability/\n    └── exp-2026-001-directionality/\n        ├── README.md\n        ├── protocol.yml\n        ├── stimuli.csv\n        ├── runs/\n        ├── analysis/\n        ├── figures/\n        └── results.qmd\nPlantilla lista para copiar: experiments/_template/. El campo line de protocol.yml identifica la línea.\nEstados posibles: planned, pilot, running, completed, replicated, archived."
+    "text": "Revisar licencia y restricciones.\nNo subir información sensible ni datos personales o médicos.\nDocumentar procedencia y cómo obtener el corpus.\nVersionar solo datos derivados cuando esté permitido.\n\nLos datasets originales no se publican automáticamente."
   },
   {
-    "objectID": "thesis/experiments/index.html#organización",
-    "href": "thesis/experiments/index.html#organización",
-    "title": "Experimentos",
+    "objectID": "thesis/corpora/index.html#política-de-datos",
+    "href": "thesis/corpora/index.html#política-de-datos",
+    "title": "Corpora",
     "section": "",
-    "text": "Los experimentos se agrupan por línea experimental (carpetas temáticas) y cada uno vive en su propia carpeta exp-YYYY-NNN-short-name/:\nexperiments/\n└── directional-probability/\n    └── exp-2026-001-directionality/\n        ├── README.md\n        ├── protocol.yml\n        ├── stimuli.csv\n        ├── runs/\n        ├── analysis/\n        ├── figures/\n        └── results.qmd\nPlantilla lista para copiar: experiments/_template/. El campo line de protocol.yml identifica la línea.\nEstados posibles: planned, pilot, running, completed, replicated, archived."
+    "text": "Revisar licencia y restricciones.\nNo subir información sensible ni datos personales o médicos.\nDocumentar procedencia y cómo obtener el corpus.\nVersionar solo datos derivados cuando esté permitido.\n\nLos datasets originales no se publican automáticamente."
   },
   {
-    "objectID": "thesis/experiments/index.html#líneas",
-    "href": "thesis/experiments/index.html#líneas",
-    "title": "Experimentos",
-    "section": "Líneas",
-    "text": "Líneas\n\n\n\n\n\n\n\nLínea\nCarpeta\n\n\n\n\nExploratorios\nexploratory/\n\n\nControlados (incluye línea 4: estímulos artificiales)\ncontrolled/\n\n\n1 · Variabilidad\nvariability/\n\n\n2 · Direccionalidad\ndirectional-probability/\n\n\n3 · Surprisal\nsurprisal/\n\n\nSondas de anomalías\nanomaly-probes/\n\n\nComparaciones entre modelos\ncross-model/"
+    "objectID": "thesis/corpora/index.html#corpus",
+    "href": "thesis/corpora/index.html#corpus",
+    "title": "Corpora",
+    "section": "Corpus",
+    "text": "Corpus\n\n\n\nCorpus\nTipo\nEstado\n\n\n\n\nReportes de sueños\nNatural\nPor documentar\n\n\nCorpus sintético\nSintético\nDiseño conceptual\n\n\n\nPlantilla de ficha: _corpus-card-template.md."
   },
   {
-    "objectID": "thesis/experiments/index.html#experimental-matrix",
-    "href": "thesis/experiments/index.html#experimental-matrix",
-    "title": "Experimentos",
-    "section": "Experimental Matrix",
-    "text": "Experimental Matrix\nSe mantiene manualmente en thesis/experiments/matrix.csv (una fila por combinación experimento × modelo × estímulo). La tabla se regenera automáticamente al renderizar.\nNo hay experimentos registrados todavía. Agregar filas en thesis/experiments/matrix.csv."
+    "objectID": "thesis/analysis/index.html",
+    "href": "thesis/analysis/index.html",
+    "title": "Análisis: definiciones",
+    "section": "",
+    "text": "Definiciones de trabajo. Cada experimento debe indicar exactamente cuál usa y cómo la calcula (base del logaritmo, tratamiento de tokens especiales, normalización por longitud)."
+  },
+  {
+    "objectID": "thesis/analysis/index.html#surprisal",
+    "href": "thesis/analysis/index.html#surprisal",
+    "title": "Análisis: definiciones",
+    "section": "Surprisal",
+    "text": "Surprisal\nPara un token \\(x_t\\) dado su contexto:\n\\[\ns(x_t) = -\\log P(x_t \\mid x_{&lt;t})\n\\]\nSurprisal de secuencia: \\(s(x_{1:T}) = \\sum_{t=1}^{T} s(x_t)\\).\nDelta surprisal en un par mínimo: \\(\\Delta s = s(\\text{anómala}) - s(\\text{correcta})\\)."
+  },
+  {
+    "objectID": "thesis/analysis/index.html#direccionalidad",
+    "href": "thesis/analysis/index.html#direccionalidad",
+    "title": "Análisis: definiciones",
+    "section": "Direccionalidad",
+    "text": "Direccionalidad\n\\[\nD(A,B) = \\log P(B \\mid A) - \\log P(A \\mid B)\n\\]\n\n\n\n\n\n\nNota\n\n\n\n\\(P(B\\mid A)\\) y \\(P(A\\mid B)\\) son condicionales distintas, obtenidas con plantillas de estímulo distintas. Documentar las plantillas y la normalización; la comparación depende de ellas."
+  },
+  {
+    "objectID": "thesis/analysis/index.html#entropía",
+    "href": "thesis/analysis/index.html#entropía",
+    "title": "Análisis: definiciones",
+    "section": "Entropía",
+    "text": "Entropía\nEntropía de respuestas (distribución de respuestas distintas sobre \\(N\\) generaciones):\n\\[\nH = -\\sum_i p_i \\log p_i\n\\]\nEntropía token a token: \\(H_t = -\\sum_{v} P(v \\mid x_{&lt;t}) \\log P(v \\mid x_{&lt;t})\\)."
+  },
+  {
+    "objectID": "thesis/analysis/index.html#checkpoints",
+    "href": "thesis/analysis/index.html#checkpoints",
+    "title": "Análisis: definiciones",
+    "section": "Checkpoints",
+    "text": "Checkpoints\n\\(P_t(B\\mid A)\\) denota la probabilidad en el checkpoint de entrenamiento \\(t\\)."
+  },
+  {
+    "objectID": "presentations/index.html",
+    "href": "presentations/index.html",
+    "title": "Presentaciones",
+    "section": "",
+    "text": "Registro de presentaciones (talks, posters, seminarios). Cada entrada: título, evento, fecha real, archivos y enlace.\nAún no hay presentaciones registradas en este sitio. El antecedente de SfN 2025 se incorporará cuando se disponga de sus datos definitivos (ver Publicaciones).\n\n\n\n Volver arriba"
+  },
+  {
+    "objectID": "doctorate/semesters/semester-01/index.html",
+    "href": "doctorate/semesters/semester-01/index.html",
+    "title": "Semestre 1",
+    "section": "",
+    "text": "Cursos: por registrar. No se han incorporado materias confirmadas todavía.\nCada curso se documenta en courses/&lt;nombre-del-curso&gt;/, conservando el nombre oficial del programa en el título de la página.\n\n\n\n Volver arriba"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Acerca de",
+    "section": "",
+    "text": "Claudio de la Rosa — Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque.\nEste repositorio es una infraestructura científica reproducible para una tesis doctoral, con una interfaz pública académica."
+  },
+  {
+    "objectID": "about.html#equipo-académico",
+    "href": "about.html#equipo-académico",
+    "title": "Acerca de",
+    "section": "Equipo académico",
+    "text": "Equipo académico\n\n\n\n\n\n\nAdvertencia\n\n\n\nLas funciones listadas son contempladas, no formalmente aprobadas, mientras no exista confirmación institucional.\n\n\n\n\n\n\n\n\n\n\nPersona\nRol contemplado\nConfirmación institucional\n\n\n\n\nDr. Andrei Alain González Galeano\nPosible asesor principal\npendiente\n\n\nDr. Ravi Kalia\nPosible asesor / coasesor\npendiente\n\n\nDr. Adrián Pastor López-Monroy\nPosible coasesor externo\npendiente\n\n\nDr. Jonathan Flórez\nDirector del Programa\n—"
+  },
+  {
+    "objectID": "about.html#cómo-citar",
+    "href": "about.html#cómo-citar",
+    "title": "Acerca de",
+    "section": "Cómo citar",
+    "text": "Cómo citar\nPendiente hasta definir versión y licencia del repositorio."
+  },
+  {
+    "objectID": "doctorate/index.html",
+    "href": "doctorate/index.html",
+    "title": "Doctorado en Ciencia de Datos e Inteligencia Artificial",
+    "section": "",
+    "text": "Esta sección documenta la formación doctoral: semestres, cursos, talleres, presentaciones, notas de estudio, lecturas e hitos académicos.\n\n\n\n\n\n\nNotaEstado del contenido\n\n\n\nAquí solo se registran materias, módulos y actividades confirmados. La estructura permite agregarlos progresivamente.\n\n\n\n\nSemestres\nOrganización por semestre y curso.\nVer semestres\n\n\nMateriales\nTalleres, presentaciones, notas, lecturas e hitos académicos están en las carpetas workshops/, presentations/, notes/, readings/ y academic-milestones/ de este directorio.\n\n\n\n\n\n Volver arriba"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Research Hub",
+    "section": "",
+    "text": "Este sitio es un Doctoral Research Hub / Computational Research Journal / Reproducible LLM Laboratory: documenta la formación doctoral y, con especial rigor, el desarrollo de la tesis Embedded Intelligence: Inheritance and Resurgence Across Large Language Models (título provisional)."
+  },
+  {
+    "objectID": "index.html#doctoral-program",
+    "href": "index.html#doctoral-program",
+    "title": "Doctoral Research Hub",
+    "section": "Doctoral Program",
+    "text": "Doctoral Program\n\n\nCursos y aprendizaje\nSemestres y cursos\n\n\nNotas, lecturas y talleres\nSección Doctorate\n\n\nPresentaciones\nPresentaciones"
+  },
+  {
+    "objectID": "index.html#thesis-research",
+    "href": "index.html#thesis-research",
+    "title": "Doctoral Research Hub",
+    "section": "Thesis Research",
+    "text": "Thesis Research\n\n\nPregunta doctoral\nPregunta y filosofía metodológica\n\n\nModelos y experimentos\nModelos · Experimentos\n\n\nCorpus, resultados y metodología\nCorpora · Resultados · Protocolos"
+  },
+  {
+    "objectID": "index.html#current-research",
+    "href": "index.html#current-research",
+    "title": "Doctoral Research Hub",
+    "section": "Current Research",
+    "text": "Current Research\nLos valores siguientes se calculan a partir de los registros del repositorio (matrix.csv, registry.csv). No se estima ni se inventa progreso.\n\nExperimentos registrados: 0\nExperimentos activos (pilot/running): 0\nÚltimo experimento: ninguno registrado\nModelos contemplados: Pythia 2.8B, Gemma 3 4B, Qwen 3 4B\n\n\n\n\n\n\n\nEstado de la tesis y publicaciones: se actualizan manualmente en Thesis y Publications."
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publicaciones",
+    "section": "",
+    "text": "Registro de posters, presentaciones en congresos, manuscritos, preprints y charlas.\n\n\n\n\n\n\n\n\n\n\n\nTipo\nTítulo\nEvento / venue\nFecha\nEnlace / DOI\nEstado\n\n\n\n\nPoster\n(por completar)\nSfN 2025\npor completar\npor completar\nantecedente de investigación; incorporar datos definitivos\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nNo se fabrican DOI, fechas ni referencias faltantes. Cada entrada se completa solo con datos verificables.\n\n\n\n\n\n Volver arriba"
+  },
+  {
+    "objectID": "thesis/corpora/dreams/index.html",
+    "href": "thesis/corpora/dreams/index.html",
+    "title": "Corpus natural: reportes de sueños",
+    "section": "",
+    "text": "Advertencia\n\n\n\nNo publicar el dataset original. Revisar licencia y confirmar ausencia de información sensible antes de versionar cualquier derivado.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nNombre\npor documentar\n\n\nFuente\npor documentar\n\n\nReferencia\npor documentar\n\n\nTamaño\npor documentar\n\n\nIdioma\npor documentar\n\n\nVariables\npor documentar\n\n\nLicencia\npor documentar\n\n\nRestricciones\npor documentar\n\n\nProcesamiento realizado\npor documentar\n\n\nCómo obtenerlo\npor documentar\n\n\n\nLos vocabularios derivados (p. ej. para generar estímulos artificiales) deben registrar algoritmo de muestreo, seed y exclusión de stopwords.\n\n\n\n Volver arriba"
   },
   {
     "objectID": "thesis/corpora/synthetic/index.html",
@@ -196,200 +322,32 @@
     "text": "Registro de cada versión del corpus\nGramática (archivo), seed, tabla de probabilidades, número de oraciones, fecha y commit del generador. Cada versión es inmutable; los cambios generan una versión nueva."
   },
   {
-    "objectID": "thesis/corpora/dreams/index.html",
-    "href": "thesis/corpora/dreams/index.html",
-    "title": "Corpus natural: reportes de sueños",
+    "objectID": "thesis/experiments/index.html",
+    "href": "thesis/experiments/index.html",
+    "title": "Experimentos",
     "section": "",
-    "text": "Advertencia\n\n\n\nNo publicar el dataset original. Revisar licencia y confirmar ausencia de información sensible antes de versionar cualquier derivado.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nNombre\npor documentar\n\n\nFuente\npor documentar\n\n\nReferencia\npor documentar\n\n\nTamaño\npor documentar\n\n\nIdioma\npor documentar\n\n\nVariables\npor documentar\n\n\nLicencia\npor documentar\n\n\nRestricciones\npor documentar\n\n\nProcesamiento realizado\npor documentar\n\n\nCómo obtenerlo\npor documentar\n\n\n\nLos vocabularios derivados (p. ej. para generar estímulos artificiales) deben registrar algoritmo de muestreo, seed y exclusión de stopwords.\n\n\n\n Volver arriba"
+    "text": "Los experimentos se agrupan por línea experimental (carpetas temáticas) y cada uno vive en su propia carpeta exp-YYYY-NNN-short-name/:\nexperiments/\n└── directional-probability/\n    └── exp-2026-001-directionality/\n        ├── README.md\n        ├── protocol.yml\n        ├── stimuli.csv\n        ├── runs/\n        ├── analysis/\n        ├── figures/\n        └── results.qmd\nPlantilla lista para copiar: experiments/_template/. El campo line de protocol.yml identifica la línea.\nEstados posibles: planned, pilot, running, completed, replicated, archived."
   },
   {
-    "objectID": "publications/index.html",
-    "href": "publications/index.html",
-    "title": "Publicaciones",
+    "objectID": "thesis/experiments/index.html#organización",
+    "href": "thesis/experiments/index.html#organización",
+    "title": "Experimentos",
     "section": "",
-    "text": "Registro de posters, presentaciones en congresos, manuscritos, preprints y charlas.\n\n\n\n\n\n\n\n\n\n\n\nTipo\nTítulo\nEvento / venue\nFecha\nEnlace / DOI\nEstado\n\n\n\n\nPoster\n(por completar)\nSfN 2025\npor completar\npor completar\nantecedente de investigación; incorporar datos definitivos\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nNo se fabrican DOI, fechas ni referencias faltantes. Cada entrada se completa solo con datos verificables.\n\n\n\n\n\n Volver arriba"
+    "text": "Los experimentos se agrupan por línea experimental (carpetas temáticas) y cada uno vive en su propia carpeta exp-YYYY-NNN-short-name/:\nexperiments/\n└── directional-probability/\n    └── exp-2026-001-directionality/\n        ├── README.md\n        ├── protocol.yml\n        ├── stimuli.csv\n        ├── runs/\n        ├── analysis/\n        ├── figures/\n        └── results.qmd\nPlantilla lista para copiar: experiments/_template/. El campo line de protocol.yml identifica la línea.\nEstados posibles: planned, pilot, running, completed, replicated, archived."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Doctoral Research Hub",
-    "section": "",
-    "text": "Este sitio es un Doctoral Research Hub / Computational Research Journal / Reproducible LLM Laboratory: documenta la formación doctoral y, con especial rigor, el desarrollo de la tesis Embedded Intelligence: Inheritance and Resurgence Across Large Language Models (título provisional)."
+    "objectID": "thesis/experiments/index.html#líneas",
+    "href": "thesis/experiments/index.html#líneas",
+    "title": "Experimentos",
+    "section": "Líneas",
+    "text": "Líneas\n\n\n\n\n\n\n\nLínea\nCarpeta\n\n\n\n\nExploratorios\nexploratory/\n\n\nControlados (incluye línea 4: estímulos artificiales)\ncontrolled/\n\n\n1 · Variabilidad\nvariability/\n\n\n2 · Direccionalidad\ndirectional-probability/\n\n\n3 · Surprisal\nsurprisal/\n\n\nSondas de anomalías\nanomaly-probes/\n\n\nComparaciones entre modelos\ncross-model/"
   },
   {
-    "objectID": "index.html#doctoral-program",
-    "href": "index.html#doctoral-program",
-    "title": "Doctoral Research Hub",
-    "section": "Doctoral Program",
-    "text": "Doctoral Program\n\n\nCursos y aprendizaje\nSemestres y cursos\n\n\nNotas, lecturas y talleres\nSección Doctorate\n\n\nPresentaciones\nPresentaciones"
-  },
-  {
-    "objectID": "index.html#thesis-research",
-    "href": "index.html#thesis-research",
-    "title": "Doctoral Research Hub",
-    "section": "Thesis Research",
-    "text": "Thesis Research\n\n\nPregunta doctoral\nPregunta y filosofía metodológica\n\n\nModelos y experimentos\nModelos · Experimentos\n\n\nCorpus, resultados y metodología\nCorpora · Resultados · Protocolos"
-  },
-  {
-    "objectID": "index.html#current-research",
-    "href": "index.html#current-research",
-    "title": "Doctoral Research Hub",
-    "section": "Current Research",
-    "text": "Current Research\nLos valores siguientes se calculan a partir de los registros del repositorio (matrix.csv, registry.csv). No se estima ni se inventa progreso.\n\nExperimentos registrados: 0\nExperimentos activos (pilot/running): 0\nÚltimo experimento: ninguno registrado\nModelos contemplados: Pythia 2.8B, Gemma 3 4B, Qwen 3 4B\n\n\n\n\n\n\n\nEstado de la tesis y publicaciones: se actualizan manualmente en Thesis y Publications."
-  },
-  {
-    "objectID": "doctorate/index.html",
-    "href": "doctorate/index.html",
-    "title": "Doctorado en Ciencia de Datos e Inteligencia Artificial",
-    "section": "",
-    "text": "Esta sección documenta la formación doctoral: semestres, cursos, talleres, presentaciones, notas de estudio, lecturas e hitos académicos.\n\n\n\n\n\n\nNotaEstado del contenido\n\n\n\nAquí solo se registran materias, módulos y actividades confirmados. La estructura permite agregarlos progresivamente.\n\n\n\n\nSemestres\nOrganización por semestre y curso.\nVer semestres\n\n\nMateriales\nTalleres, presentaciones, notas, lecturas e hitos académicos están en las carpetas workshops/, presentations/, notes/, readings/ y academic-milestones/ de este directorio.\n\n\n\n\n\n Volver arriba"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Acerca de",
-    "section": "",
-    "text": "Claudio de la Rosa — Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque.\nEste repositorio es una infraestructura científica reproducible para una tesis doctoral, con una interfaz pública académica."
-  },
-  {
-    "objectID": "about.html#equipo-académico",
-    "href": "about.html#equipo-académico",
-    "title": "Acerca de",
-    "section": "Equipo académico",
-    "text": "Equipo académico\n\n\n\n\n\n\nAdvertencia\n\n\n\nLas funciones listadas son contempladas, no formalmente aprobadas, mientras no exista confirmación institucional.\n\n\n\n\n\n\n\n\n\n\nPersona\nRol contemplado\nConfirmación institucional\n\n\n\n\nDr. Andrei Alain González Galeano\nPosible asesor principal\npendiente\n\n\nDr. Ravi Kalia\nPosible asesor / coasesor\npendiente\n\n\nDr. Adrián Pastor López-Monroy\nPosible coasesor externo\npendiente\n\n\nDr. Jonathan Flórez\nDirector del Programa\n—"
-  },
-  {
-    "objectID": "about.html#cómo-citar",
-    "href": "about.html#cómo-citar",
-    "title": "Acerca de",
-    "section": "Cómo citar",
-    "text": "Cómo citar\nPendiente hasta definir versión y licencia del repositorio."
-  },
-  {
-    "objectID": "doctorate/semesters/semester-01/index.html",
-    "href": "doctorate/semesters/semester-01/index.html",
-    "title": "Semestre 1",
-    "section": "",
-    "text": "Cursos: por registrar. No se han incorporado materias confirmadas todavía.\nCada curso se documenta en courses/&lt;nombre-del-curso&gt;/, conservando el nombre oficial del programa en el título de la página.\n\n\n\n Volver arriba"
-  },
-  {
-    "objectID": "presentations/index.html",
-    "href": "presentations/index.html",
-    "title": "Presentaciones",
-    "section": "",
-    "text": "Registro de presentaciones (talks, posters, seminarios). Cada entrada: título, evento, fecha real, archivos y enlace.\nAún no hay presentaciones registradas en este sitio. El antecedente de SfN 2025 se incorporará cuando se disponga de sus datos definitivos (ver Publicaciones).\n\n\n\n Volver arriba"
-  },
-  {
-    "objectID": "thesis/analysis/index.html",
-    "href": "thesis/analysis/index.html",
-    "title": "Análisis: definiciones",
-    "section": "",
-    "text": "Definiciones de trabajo. Cada experimento debe indicar exactamente cuál usa y cómo la calcula (base del logaritmo, tratamiento de tokens especiales, normalización por longitud)."
-  },
-  {
-    "objectID": "thesis/analysis/index.html#surprisal",
-    "href": "thesis/analysis/index.html#surprisal",
-    "title": "Análisis: definiciones",
-    "section": "Surprisal",
-    "text": "Surprisal\nPara un token \\(x_t\\) dado su contexto:\n\\[\ns(x_t) = -\\log P(x_t \\mid x_{&lt;t})\n\\]\nSurprisal de secuencia: \\(s(x_{1:T}) = \\sum_{t=1}^{T} s(x_t)\\).\nDelta surprisal en un par mínimo: \\(\\Delta s = s(\\text{anómala}) - s(\\text{correcta})\\)."
-  },
-  {
-    "objectID": "thesis/analysis/index.html#direccionalidad",
-    "href": "thesis/analysis/index.html#direccionalidad",
-    "title": "Análisis: definiciones",
-    "section": "Direccionalidad",
-    "text": "Direccionalidad\n\\[\nD(A,B) = \\log P(B \\mid A) - \\log P(A \\mid B)\n\\]\n\n\n\n\n\n\nNota\n\n\n\n\\(P(B\\mid A)\\) y \\(P(A\\mid B)\\) son condicionales distintas, obtenidas con plantillas de estímulo distintas. Documentar las plantillas y la normalización; la comparación depende de ellas."
-  },
-  {
-    "objectID": "thesis/analysis/index.html#entropía",
-    "href": "thesis/analysis/index.html#entropía",
-    "title": "Análisis: definiciones",
-    "section": "Entropía",
-    "text": "Entropía\nEntropía de respuestas (distribución de respuestas distintas sobre \\(N\\) generaciones):\n\\[\nH = -\\sum_i p_i \\log p_i\n\\]\nEntropía token a token: \\(H_t = -\\sum_{v} P(v \\mid x_{&lt;t}) \\log P(v \\mid x_{&lt;t})\\)."
-  },
-  {
-    "objectID": "thesis/analysis/index.html#checkpoints",
-    "href": "thesis/analysis/index.html#checkpoints",
-    "title": "Análisis: definiciones",
-    "section": "Checkpoints",
-    "text": "Checkpoints\n\\(P_t(B\\mid A)\\) denota la probabilidad en el checkpoint de entrenamiento \\(t\\)."
-  },
-  {
-    "objectID": "thesis/corpora/index.html",
-    "href": "thesis/corpora/index.html",
-    "title": "Corpora",
-    "section": "",
-    "text": "Revisar licencia y restricciones.\nNo subir información sensible ni datos personales o médicos.\nDocumentar procedencia y cómo obtener el corpus.\nVersionar solo datos derivados cuando esté permitido.\n\nLos datasets originales no se publican automáticamente."
-  },
-  {
-    "objectID": "thesis/corpora/index.html#política-de-datos",
-    "href": "thesis/corpora/index.html#política-de-datos",
-    "title": "Corpora",
-    "section": "",
-    "text": "Revisar licencia y restricciones.\nNo subir información sensible ni datos personales o médicos.\nDocumentar procedencia y cómo obtener el corpus.\nVersionar solo datos derivados cuando esté permitido.\n\nLos datasets originales no se publican automáticamente."
-  },
-  {
-    "objectID": "thesis/corpora/index.html#corpus",
-    "href": "thesis/corpora/index.html#corpus",
-    "title": "Corpora",
-    "section": "Corpus",
-    "text": "Corpus\n\n\n\nCorpus\nTipo\nEstado\n\n\n\n\nReportes de sueños\nNatural\nPor documentar\n\n\nCorpus sintético\nSintético\nDiseño conceptual\n\n\n\nPlantilla de ficha: _corpus-card-template.md."
-  },
-  {
-    "objectID": "thesis/decisions/decision-log.html",
-    "href": "thesis/decisions/decision-log.html",
-    "title": "Research Log · Decision Log",
-    "section": "",
-    "text": "Cada decisión se registra con: date, decision, reason, alternatives, implications, status (proposed, accepted, superseded, rejected)."
-  },
-  {
-    "objectID": "thesis/decisions/decision-log.html#decisiones-registradas",
-    "href": "thesis/decisions/decision-log.html#decisiones-registradas",
-    "title": "Research Log · Decision Log",
-    "section": "Decisiones registradas",
-    "text": "Decisiones registradas\n\n\n\n\n\n\n\n\n\n\n\n\nID\nFecha\nDecisión\nMotivo\nAlternativas\nImplicaciones\nEstado\n\n\n\n\nD-001\n2026-11-05\nLas líneas experimentales son carpetas padre en experiments/; cada experimento es exp-YYYY-NNN-short-name/ dentro de su línea, con line en protocol.yml\nConciliar la organización temática con la convención de identificadores\nExperimentos en un único nivel con etiquetas\nPlantilla en experiments/_template/\naccepted\n\n\nD-002\n2026-11-05\nLos estímulos artificiales (línea 4) se documentan en stimuli/synthetic/ y sus experimentos en experiments/controlled/\nEl árbol base no define carpeta propia para la línea 4\nCrear experiments/artificial-stimuli/\nReversible con un movimiento de carpeta\naccepted\n\n\nD-003\n2026-11-05\nSe agrega results/negative-results/\nConservar resultados nulos\n—\nNinguna\naccepted\n\n\nD-004\n2026-11-05\nReglas de .gitignore para pesos y datos se aplican en cualquier ruta (*.gguf, **/data/raw/, …)\nLos modelos documentados viven bajo thesis/models/\nReglas solo en raíz\nEvita subir pesos por error\naccepted"
-  },
-  {
-    "objectID": "thesis/decisions/decision-log.html#decisiones-por-registrar",
-    "href": "thesis/decisions/decision-log.html#decisiones-por-registrar",
-    "title": "Research Log · Decision Log",
-    "section": "Decisiones por registrar",
-    "text": "Decisiones por registrar\nCompletar con fecha y motivo reales: selección de Pythia, incorporación de Gemma y de Qwen, uso de llama.cpp, parámetros de inferencia, exclusión de modelos, cambios de métricas, cambios de protocolo. No se reconstruyen retroactivamente fechas desconocidas."
-  },
-  {
-    "objectID": "thesis/decisions/decision-log.html#plantilla",
-    "href": "thesis/decisions/decision-log.html#plantilla",
-    "title": "Research Log · Decision Log",
-    "section": "Plantilla",
-    "text": "Plantilla\nID:\nFecha:\nDecisión:\nMotivo:\nAlternativas:\nImplicaciones:\nEstado:"
-  },
-  {
-    "objectID": "thesis/hypotheses/inheritance-resurgence.html",
-    "href": "thesis/hypotheses/inheritance-resurgence.html",
-    "title": "Inheritance y Resurgence",
-    "section": "",
-    "text": "Advertencia\n\n\n\nEstos conceptos son constructos experimentales y no fenómenos asumidos como demostrados."
-  },
-  {
-    "objectID": "thesis/hypotheses/inheritance-resurgence.html#definiciones-provisionales",
-    "href": "thesis/hypotheses/inheritance-resurgence.html#definiciones-provisionales",
-    "title": "Inheritance y Resurgence",
-    "section": "Definiciones provisionales",
-    "text": "Definiciones provisionales\nInheritance. Posibilidad de que regularidades presentes en el lenguaje de entrenamiento sean incorporadas por el modelo. Pueden ser léxicas, sintácticas, semánticas, lógicas, culturales o relacionales.\nResurgence. Posibilidad de que estructuras aprendidas previamente vuelvan a expresarse bajo determinadas condiciones de contexto o estimulación."
-  },
-  {
-    "objectID": "thesis/hypotheses/inheritance-resurgence.html#explicaciones-alternativas-que-deben-compararse",
-    "href": "thesis/hypotheses/inheritance-resurgence.html#explicaciones-alternativas-que-deben-compararse",
-    "title": "Inheritance y Resurgence",
-    "section": "Explicaciones alternativas que deben compararse",
-    "text": "Explicaciones alternativas que deben compararse\n\n\n\n\n\n\n\nAlternativa\nIdea\n\n\n\n\nMemorization\nReproducción de secuencias vistas en entrenamiento\n\n\nLocal conditional probability\nEfecto de probabilidades condicionales locales\n\n\nDistributional association\nCo-ocurrencias en el corpus de entrenamiento\n\n\nGeneralization\nExtrapolación más allá de lo visto\n\n\nRetrieval\nRecuperación de contenido específico\n\n\nDecoding artifacts\nEfectos de temperatura, top-k/top-p, penalizaciones\n\n\nAutoregressive degeneration\nDegradación o bucles en generación larga\n\n\n\nUn patrón solo se interpreta como compatible con Inheritance o Resurgence si las alternativas se han considerado y registrado explícitamente."
-  },
-  {
-    "objectID": "thesis/hypotheses/inheritance-resurgence.html#cómo-se-pone-a-prueba",
-    "href": "thesis/hypotheses/inheritance-resurgence.html#cómo-se-pone-a-prueba",
-    "title": "Inheritance y Resurgence",
-    "section": "Cómo se pone a prueba",
-    "text": "Cómo se pone a prueba\nEl corpus sintético y el modelo experimental propio permitirán comparar la estructura probabilística del corpus de entrenamiento con la estructura aprendida y el comportamiento generativo."
+    "objectID": "thesis/experiments/index.html#experimental-matrix",
+    "href": "thesis/experiments/index.html#experimental-matrix",
+    "title": "Experimentos",
+    "section": "Experimental Matrix",
+    "text": "Experimental Matrix\nSe mantiene manualmente en thesis/experiments/matrix.csv (una fila por combinación experimento × modelo × estímulo). La tabla se regenera automáticamente al renderizar.\nNo hay experimentos registrados todavía. Agregar filas en thesis/experiments/matrix.csv."
   },
   {
     "objectID": "thesis/index.html",
