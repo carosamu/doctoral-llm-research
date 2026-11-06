@@ -28,7 +28,7 @@ Cada experimento usa `thesis/experiments/_template/` y registra todos los parám
 
 ## Sitio web
 
-https://github.com/carosamu/doctoral-llm-research/
+https://carosamu.github.io/doctoral-llm-research/
 
 ```bash
 quarto render      # requiere Quarto y Python 3 (solo biblioteca estándar)
