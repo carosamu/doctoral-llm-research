@@ -15,8 +15,6 @@ Las funciones listadas son **contempladas**, no formalmente aprobadas, mientras 
 | Persona | Rol contemplado | Confirmación institucional |
 |---|---|---|
 | Dr. Andrei Alain González Galeano | Posible asesor principal | pendiente |
-| Dr. Ravi Kalia | Posible asesor / coasesor | pendiente |
-| Dr. Adrián Pastor López-Monroy | Posible coasesor externo | pendiente |
 | Dr. Jonathan Flórez | Director del Programa | — |
 
 ## Cómo citar
