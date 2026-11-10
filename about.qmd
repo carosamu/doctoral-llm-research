@@ -14,7 +14,7 @@ Las funciones listadas son **contempladas**, no formalmente aprobadas, mientras 
 
 | Persona | Rol contemplado | Confirmación institucional |
 |---|---|---|
-| Dr. Andrei Alain González Galeano | Posible asesor principal | pendiente |
+| Dr. Andrei Alain González Galeano | Asesor principal | pendiente |
 | Dr. Jonathan Flórez | Director del Programa | — |
 
 ## Cómo citar
