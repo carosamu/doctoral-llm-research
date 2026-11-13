@@ -1,0 +1,55 @@
+---
+title: "Pythia 2.8B: tres ejercicios exploratorios (2026)"
+description: "Registro descriptivo de los ejercicios de variabilidad, asimetría direccional y anomalías"
+---
+
+## Alcance y estatus
+
+**Estado:** exploratorio, completado en noviembre de 2026. Los resultados describen el comportamiento de una implementación específica de Pythia 2.8B y no prueban inteligencia, conciencia ni los constructos provisionales de *Inheritance* o *Resurgence*.
+
+**Modelo y entorno registrados:** `EleutherAI/pythia-2.8b`, `GPTNeoXTokenizerFast`, `float32`, atención `eager`, CUDA 12.8, GPU NVIDIA RTX 5080 Laptop; Python 3.12.10, PyTorch 2.7.1+cu128, Transformers 4.57.6 y Tokenizers 0.22.2. La revisión del modelo registrada fue `2a259cdd96a4beb1cdf467512e3904197345f6a9`.
+
+## Ejercicio 1: variabilidad bajo contexto breve
+
+Se generaron **3.600 continuaciones** de 60 dichos artificiales en inglés, con 30 repeticiones por dicho sin prefijo y 30 con el prefijo `This is an artificial saying.`, a temperatura 1.
+
+- La entropía del primer token disminuyó en **54 de 60** dichos; reducción media **0,995 bits**.
+- En los primeros ocho pasos, disminuyó en **58 de 60** dichos; reducción media **0,906 bits**, entre los casos que alcanzaron el paso ocho.
+- La entropía empírica de cadenas completas alcanzó su máximo muestral en **117 de 120** combinaciones, por lo que tiene capacidad discriminativa limitada con este tamaño de muestra.
+
+**Interpretación prudente:** un contexto breve modifica de manera sistemática la distribución predictiva inicial en este conjunto de estímulos. No se infiere que exista una representación semántica específica a partir de este dato solamente.
+
+## Ejercicio 2: asimetría direccional
+
+Se puntuaron **76 pares de oraciones adyacentes** provenientes de 28 soñantes. En cada par, A precedía a B en el relato original. Se comparó `log P(B|A) − log P(A|B)`.
+
+- Diferencia positiva en **40 de 76** pares.
+- En **66 de 74** pares de longitud desigual, la log-probabilidad total favoreció al objetivo más corto.
+- La normalización por token cambió el signo del contraste en **29 pares**.
+- Intervalo exploratorio del 95 % para la media total, mediante remuestreo por soñante: **−1,96 a +11,68 nats**; para la media por token: **−0,054 a +0,412 nats/token**.
+
+**Interpretación prudente:** no se ha establecido una ventaja global concluyente del orden narrativo original. La longitud de la secuencia objetivo es un factor de confusión importante y exige informar medidas totales y por token.
+
+## Ejercicio 3: anomalías de un token
+
+Se evaluaron **32 contrastes**, construidos a partir de 24 oraciones de 15 soñantes. Cada contraste sustituyó exactamente un token y mantuvo la longitud total.
+
+| Tipo | Δ surprisal en token editado (bits) | Δ posterior (bits) | Δ oración completa (bits) |
+|---|---:|---:|---:|
+| Sintáctica | +11,10 | +1,69 | +12,79 |
+| Semántica | +6,09 | +9,02 | +15,11 |
+| Lógica | +0,61 | +0,14 | +0,74 |
+
+Los aumentos en el token editado se observaron en 8/8 contrastes sintácticos, 8/8 semánticos y 6/8 lógicos. Los ítems lógicos se resumieron promediando sus dos orientaciones.
+
+**Interpretación prudente:** las perturbaciones sintácticas y semánticas parecen diferir en cómo distribuyen el costo probabilístico entre el punto editado y los tokens posteriores; estos resultados requieren replicación.
+
+## Archivos de evidencia y límites de publicación
+
+El registro experimental original menciona `forced_sayings_nc3_prepared.csv`, `pairs_reviewed.csv`, `anomaly_pairs_reviewed.csv`, manifiestos, tablas y puntuaciones por token. **Estos datos no se incluyen aquí**: su procedencia, licencia y presencia de texto humano deben revisarse antes de publicar.
+
+**Fuente interna:** *Avance experimental con Pythia: resultados de tres ejercicios exploratorios y propuesta de ajuste fino*, versión 1.2, 9 de noviembre de 2026. Esta página es un resumen descriptivo, no una publicación revisada por pares.
+
+## Próximo experimento propuesto
+
+Comparar el mismo checkpoint inicial con dos ajustes finos: oraciones en orden original frente a las mismas oraciones permutadas dentro del relato. Particionar entrenamiento, validación y prueba **por soñante** antes de preparar las condiciones. Variable principal propuesta: diferencia de surprisal de la misma oración objetivo después de contexto adyacente frente a contexto no adyacente del mismo relato, controlando longitud y otras características pertinentes. Este estudio **no figura como ejecutado**.

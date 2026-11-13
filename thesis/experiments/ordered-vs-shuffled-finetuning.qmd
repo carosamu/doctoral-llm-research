@@ -1,0 +1,40 @@
+---
+title: "Propuesta experimental: ajuste fino con orden narrativo original y permutado"
+---
+
+**Estado:** propuesta; no ejecutado.
+
+## Pregunta
+
+¿En qué medida conservar el orden de las oraciones durante el ajuste fino cambia la ventaja predictiva del contexto narrativo inmediatamente adyacente?
+
+## Condiciones
+
+1. Línea base: Pythia 2.8B en el checkpoint de referencia.
+2. Ajuste fino con las oraciones de cada relato en su secuencia original.
+3. Ajuste fino con las mismas oraciones permutadas **dentro de cada relato**, manteniendo intacto el texto de cada oración.
+
+Las dos ramas deben iniciar del mismo checkpoint y utilizar el mismo tokenizador, procedimiento de entrenamiento, hiperparámetros y presupuesto de tokens, con semillas registradas.
+
+## Partición y control
+
+La partición entre entrenamiento, validación y prueba se efectuará **por soñante antes de transformar los relatos**, evitando filtración entre particiones. El conjunto de prueba será idéntico para las tres condiciones.
+
+## Variable principal propuesta
+
+Para cada oración objetivo T, definir:
+
+\[
+A = S(T \mid C_{\mathrm{control}}) - S(T \mid C_{\mathrm{adyacente}})
+\]
+
+Donde `S` es el surprisal de la misma secuencia objetivo bajo dos contextos: una oración inmediatamente anterior y otra no adyacente del mismo relato, emparejada por criterios previamente definidos.
+
+**Hipótesis de trabajo:** preservar el orden narrativo aumentaría la ventaja predictiva del contexto adyacente respecto de la versión permutada. Esta hipótesis se someterá a evaluación, no se presenta como resultado.
+
+## Decisiones pendientes
+
+- Criterios exactos para igualar o controlar contextos.
+- Tamaño del conjunto de entrenamiento y réplicas.
+- Presupuesto de cómputo y selección de checkpoints.
+- Tratamiento estadístico de dependencias por soñante y relato.
