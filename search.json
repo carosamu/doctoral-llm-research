@@ -266,6 +266,41 @@
     "text": "Esta sección documenta la formación doctoral: semestres, cursos, talleres, presentaciones, notas de estudio, lecturas e hitos académicos.\n\n\n\n\n\n\nNotaEstado del contenido\n\n\n\nAquí solo se registran materias, módulos y actividades confirmados. La estructura permite agregarlos progresivamente.\n\n\n\n\nSemestres\nOrganización por semestre y curso.\nVer semestres\n\n\nMateriales\nTalleres, presentaciones, notas, lecturas e hitos académicos están en las carpetas workshops/, presentations/, notes/, readings/ y academic-milestones/ de este directorio.\n\n\n\n\n\n Volver arriba"
   },
   {
+    "objectID": "docs/apps/doctoral-llm-lab.html",
+    "href": "docs/apps/doctoral-llm-lab.html",
+    "title": "Aplicación 2: Doctoral LLM Lab",
+    "section": "",
+    "text": "Laboratorio en Python para estudios de variabilidad, asimetría direccional y surprisal de anomalías, con puntuación probabilística directa y exportación reproducible."
+  },
+  {
+    "objectID": "docs/apps/doctoral-llm-lab.html#propósito",
+    "href": "docs/apps/doctoral-llm-lab.html#propósito",
+    "title": "Aplicación 2: Doctoral LLM Lab",
+    "section": "",
+    "text": "Laboratorio en Python para estudios de variabilidad, asimetría direccional y surprisal de anomalías, con puntuación probabilística directa y exportación reproducible."
+  },
+  {
+    "objectID": "docs/apps/doctoral-llm-lab.html#entorno-experimental-registrado",
+    "href": "docs/apps/doctoral-llm-lab.html#entorno-experimental-registrado",
+    "title": "Aplicación 2: Doctoral LLM Lab",
+    "section": "Entorno experimental registrado",
+    "text": "Entorno experimental registrado\n\n\n\nComponente\nVersión o detalle registrado\n\n\n\n\nSistema operativo\nWindows 11 Pro\n\n\nPython\n3.12.10\n\n\nPyTorch\n2.7.1+cu128\n\n\nCUDA\n12.8\n\n\nTransformers\n4.57.6\n\n\nTokenizers\n0.22.2\n\n\nGPU\nNVIDIA RTX 5080 Laptop, 16 GB VRAM\n\n\nModelo de línea base\nEleutherAI/pythia-2.8b\n\n\nTokenizador\nGPTNeoXTokenizerFast\n\n\nPrecisión\nfloat32, sin cuantización\n\n\nAtención\neager\n\n\nInterfaz\nStreamlit\n\n\n\nEstas son condiciones registradas, no especificaciones de versiones mínimas. Para reinstalación reproducible deben verificarse con un manifiesto de dependencias del entorno funcional y compatibilidad del controlador GPU."
+  },
+  {
+    "objectID": "docs/apps/doctoral-llm-lab.html#ejercicios-ejecutados",
+    "href": "docs/apps/doctoral-llm-lab.html#ejercicios-ejecutados",
+    "title": "Aplicación 2: Doctoral LLM Lab",
+    "section": "Ejercicios ejecutados",
+    "text": "Ejercicios ejecutados\n\nVariabilidad: 60 dichos artificiales, 30 continuaciones por condición contextual (3.600 generaciones).\nAsimetría: 76 pares de oraciones de reportes de sueños.\nAnomalías: 32 contrastes de un token.\n\nVer resumen de resultados."
+  },
+  {
+    "objectID": "docs/apps/doctoral-llm-lab.html#política-de-publicación",
+    "href": "docs/apps/doctoral-llm-lab.html#política-de-publicación",
+    "title": "Aplicación 2: Doctoral LLM Lab",
+    "section": "Política de publicación",
+    "text": "Política de publicación\nNo subir pesos de modelos, reportes individuales ni archivos de estímulos que contengan contenido sujeto a licencia o privacidad sin revisión previa. Conservar manifestos, hashes y resúmenes autorizados."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Acerca de",
@@ -285,6 +320,41 @@
     "title": "Acerca de",
     "section": "Cómo citar",
     "text": "Cómo citar\nPendiente hasta definir versión y licencia del repositorio."
+  },
+  {
+    "objectID": "docs/apps/experimental-runner.html",
+    "href": "docs/apps/experimental-runner.html",
+    "title": "Aplicación 1: Pythia Experimental Runner",
+    "section": "",
+    "text": "GUI local para explorar continuaciones, editar estímulos y parámetros de llama.cpp, y conservar registros de cada iteración."
+  },
+  {
+    "objectID": "docs/apps/experimental-runner.html#propósito",
+    "href": "docs/apps/experimental-runner.html#propósito",
+    "title": "Aplicación 1: Pythia Experimental Runner",
+    "section": "",
+    "text": "GUI local para explorar continuaciones, editar estímulos y parámetros de llama.cpp, y conservar registros de cada iteración."
+  },
+  {
+    "objectID": "docs/apps/experimental-runner.html#entorno-usado",
+    "href": "docs/apps/experimental-runner.html#entorno-usado",
+    "title": "Aplicación 1: Pythia Experimental Runner",
+    "section": "Entorno usado",
+    "text": "Entorno usado\n\nmacOS en MacBook Pro Intel; Python 3.12.\nInterfaz con Tkinter (biblioteca estándar; su disponibilidad depende de la instalación de Python).\nMotor externo llama.cpp, ejecutable llama-completion.\nModelo oficial Pythia 2.8B convertido localmente a GGUF F16.\nEjecución CPU mediante --device none."
+  },
+  {
+    "objectID": "docs/apps/experimental-runner.html#comando-basal-de-ejemplo",
+    "href": "docs/apps/experimental-runner.html#comando-basal-de-ejemplo",
+    "title": "Aplicación 1: Pythia Experimental Runner",
+    "section": "Comando basal de ejemplo",
+    "text": "Comando basal de ejemplo\n~/Documents/llama.cpp/build/bin/llama-completion \\\n  -m ~/Documents/pythia-2.8b-official-f16.gguf \\\n  --device none --no-conversation \\\n  -p 'regex' -n 200 --temp 0 -s 42 -b 128 -ub 128\nPara exploración de la repetición se probó --repeat-penalty 1.08, sin tratar ese valor como condición basal neutral."
+  },
+  {
+    "objectID": "docs/apps/experimental-runner.html#archivos-y-límites",
+    "href": "docs/apps/experimental-runner.html#archivos-y-límites",
+    "title": "Aplicación 1: Pythia Experimental Runner",
+    "section": "Archivos y límites",
+    "text": "Archivos y límites\nEl archivo de aplicación original se llamó pythia_lab_gui.py. El registro se almacena en JSONL. Esta página documenta el entorno; no indica que el código de la app esté incluido en este repositorio."
   },
   {
     "objectID": "doctorate/semesters/semester-01/index.html",
