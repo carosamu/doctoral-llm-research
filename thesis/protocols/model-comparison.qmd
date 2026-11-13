@@ -1,0 +1,36 @@
+---
+title: "Protocolo: comparación entre familias de modelos"
+---
+
+## Propósito
+
+Comparar respuestas de **Pythia 2.8B**, **Gemma 3 4B** y **Qwen3 4B** frente a estímulos equivalentes, sin asumir equivalencia arquitectónica o de entrenamiento.
+
+## Registro mínimo por corrida
+
+| Campo | Descripción |
+|---|---|
+| `experiment_id` | Identificador único del protocolo |
+| `stimulus_id` | Identificador estable del estímulo |
+| `model_id` y `revision` | Identidad y revisión exacta del modelo |
+| `model_sha256` | Hash cuando el archivo local lo permita |
+| `tokenizer_id` | Tokenizador y versión |
+| `runtime` y `runtime_version` | Motor y revisión del entorno |
+| `prompt_literal` | Estímulo exacto, incluidos espacios y signos |
+| `chat_template` | Ausente o plantilla aplicada, con versión |
+| `temperature`, `top_k`, `top_p`, `min_p` | Parámetros efectivos |
+| `repeat_penalty`, `repeat_last_n` | Penalizaciones efectivas |
+| `seed`, `max_new_tokens` | Semilla y presupuesto de salida |
+| `precision`, `quantization`, `device` | Condiciones numéricas y hardware |
+| `stop_reason`, `output` | Motivo de terminación y salida |
+| `timestamp` | Fecha y hora |
+
+## Comparabilidad
+
+La coincidencia de números de temperatura o semillas **no garantiza distribuciones equivalentes entre motores, modelos o tokenizadores**. Para probabilidades de secuencias se debe definir con precisión qué tokens se puntúan, el separador contexto–objetivo y la política sobre EOS. Evitar comparar directamente la entropía del siguiente token sin reconocer diferencias de vocabulario.
+
+Separar tres condiciones: generación greedy, generación muestreada y puntuación directa de probabilidades. Esta última no requiere temperatura. No considerar la penalización de repetición como neutral al evaluar distribuciones probabilísticas originales.
+
+## Interpretación
+
+Distinguir siempre observación, artefactos de decodificación, hipótesis y evidencia replicada. Conservar resultados negativos y las diferencias entre variantes base e instruccionales.
