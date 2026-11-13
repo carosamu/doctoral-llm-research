@@ -1,0 +1,38 @@
+---
+title: "Aplicación 2: Doctoral LLM Lab"
+---
+
+## Propósito
+
+Laboratorio en Python para estudios de variabilidad, asimetría direccional y surprisal de anomalías, con puntuación probabilística directa y exportación reproducible.
+
+## Entorno experimental registrado
+
+| Componente | Versión o detalle registrado |
+|---|---|
+| Sistema operativo | Windows 11 Pro |
+| Python | 3.12.10 |
+| PyTorch | 2.7.1+cu128 |
+| CUDA | 12.8 |
+| Transformers | 4.57.6 |
+| Tokenizers | 0.22.2 |
+| GPU | NVIDIA RTX 5080 Laptop, 16 GB VRAM |
+| Modelo de línea base | `EleutherAI/pythia-2.8b` |
+| Tokenizador | `GPTNeoXTokenizerFast` |
+| Precisión | float32, sin cuantización |
+| Atención | eager |
+| Interfaz | Streamlit |
+
+Estas son condiciones **registradas**, no especificaciones de versiones mínimas. Para reinstalación reproducible deben verificarse con un manifiesto de dependencias del entorno funcional y compatibilidad del controlador GPU.
+
+## Ejercicios ejecutados
+
+- Variabilidad: 60 dichos artificiales, 30 continuaciones por condición contextual (3.600 generaciones).
+- Asimetría: 76 pares de oraciones de reportes de sueños.
+- Anomalías: 32 contrastes de un token.
+
+Ver [resumen de resultados](../../thesis/experiments/pythia-2026-exploratory.qmd).
+
+## Política de publicación
+
+No subir pesos de modelos, reportes individuales ni archivos de estímulos que contengan contenido sujeto a licencia o privacidad sin revisión previa. Conservar manifestos, hashes y resúmenes autorizados.

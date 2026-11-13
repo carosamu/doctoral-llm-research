@@ -1,0 +1,30 @@
+---
+title: "Aplicación 1: Pythia Experimental Runner"
+---
+
+## Propósito
+
+GUI local para explorar continuaciones, editar estímulos y parámetros de `llama.cpp`, y conservar registros de cada iteración.
+
+## Entorno usado
+
+- macOS en MacBook Pro Intel; Python 3.12.
+- Interfaz con **Tkinter** (biblioteca estándar; su disponibilidad depende de la instalación de Python).
+- Motor externo `llama.cpp`, ejecutable `llama-completion`.
+- Modelo oficial Pythia 2.8B convertido localmente a **GGUF F16**.
+- Ejecución CPU mediante `--device none`.
+
+## Comando basal de ejemplo
+
+```bash
+~/Documents/llama.cpp/build/bin/llama-completion \
+  -m ~/Documents/pythia-2.8b-official-f16.gguf \
+  --device none --no-conversation \
+  -p 'regex' -n 200 --temp 0 -s 42 -b 128 -ub 128
+```
+
+Para exploración de la repetición se probó `--repeat-penalty 1.08`, **sin tratar ese valor como condición basal neutral**.
+
+## Archivos y límites
+
+El archivo de aplicación original se llamó `pythia_lab_gui.py`. El registro se almacena en JSONL. Esta página documenta el entorno; **no indica que el código de la app esté incluido en este repositorio**.
