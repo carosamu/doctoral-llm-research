@@ -112,6 +112,48 @@
     "text": "Cómo se pone a prueba\nEl corpus sintético y el modelo experimental propio permitirán comparar la estructura probabilística del corpus de entrenamiento con la estructura aprendida y el comportamiento generativo."
   },
   {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "",
+    "text": "Estado: propuesta; no ejecutado."
+  },
+  {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html#pregunta",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html#pregunta",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "Pregunta",
+    "text": "Pregunta\n¿En qué medida conservar el orden de las oraciones durante el ajuste fino cambia la ventaja predictiva del contexto narrativo inmediatamente adyacente?"
+  },
+  {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html#condiciones",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html#condiciones",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "Condiciones",
+    "text": "Condiciones\n\nLínea base: Pythia 2.8B en el checkpoint de referencia.\nAjuste fino con las oraciones de cada relato en su secuencia original.\nAjuste fino con las mismas oraciones permutadas dentro de cada relato, manteniendo intacto el texto de cada oración.\n\nLas dos ramas deben iniciar del mismo checkpoint y utilizar el mismo tokenizador, procedimiento de entrenamiento, hiperparámetros y presupuesto de tokens, con semillas registradas."
+  },
+  {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html#partición-y-control",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html#partición-y-control",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "Partición y control",
+    "text": "Partición y control\nLa partición entre entrenamiento, validación y prueba se efectuará por soñante antes de transformar los relatos, evitando filtración entre particiones. El conjunto de prueba será idéntico para las tres condiciones."
+  },
+  {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html#variable-principal-propuesta",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html#variable-principal-propuesta",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "Variable principal propuesta",
+    "text": "Variable principal propuesta\nPara cada oración objetivo T, definir:\n[ A = S(T C_{}) - S(T C_{}) ]\nDonde S es el surprisal de la misma secuencia objetivo bajo dos contextos: una oración inmediatamente anterior y otra no adyacente del mismo relato, emparejada por criterios previamente definidos.\nHipótesis de trabajo: preservar el orden narrativo aumentaría la ventaja predictiva del contexto adyacente respecto de la versión permutada. Esta hipótesis se someterá a evaluación, no se presenta como resultado."
+  },
+  {
+    "objectID": "thesis/experiments/ordered-vs-shuffled-finetuning.html#decisiones-pendientes",
+    "href": "thesis/experiments/ordered-vs-shuffled-finetuning.html#decisiones-pendientes",
+    "title": "Propuesta experimental: ajuste fino con orden narrativo original y permutado",
+    "section": "Decisiones pendientes",
+    "text": "Decisiones pendientes\n\nCriterios exactos para igualar o controlar contextos.\nTamaño del conjunto de entrenamiento y réplicas.\nPresupuesto de cómputo y selección de checkpoints.\nTratamiento estadístico de dependencias por soñante y relato."
+  },
+  {
     "objectID": "thesis/decisions/decision-log.html",
     "href": "thesis/decisions/decision-log.html",
     "title": "Research Log · Decision Log",
@@ -348,6 +390,55 @@
     "title": "Experimentos",
     "section": "Experimental Matrix",
     "text": "Experimental Matrix\nSe mantiene manualmente en thesis/experiments/matrix.csv (una fila por combinación experimento × modelo × estímulo). La tabla se regenera automáticamente al renderizar.\nNo hay experimentos registrados todavía. Agregar filas en thesis/experiments/matrix.csv."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html",
+    "href": "thesis/experiments/pythia-2026-exploratory.html",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "",
+    "text": "Estado: exploratorio, completado en noviembre de 2026. Los resultados describen el comportamiento de una implementación específica de Pythia 2.8B y no prueban inteligencia, conciencia ni los constructos provisionales de Inheritance o Resurgence.\nModelo y entorno registrados: EleutherAI/pythia-2.8b, GPTNeoXTokenizerFast, float32, atención eager, CUDA 12.8, GPU NVIDIA RTX 5080 Laptop; Python 3.12.10, PyTorch 2.7.1+cu128, Transformers 4.57.6 y Tokenizers 0.22.2. La revisión del modelo registrada fue 2a259cdd96a4beb1cdf467512e3904197345f6a9."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#alcance-y-estatus",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#alcance-y-estatus",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "",
+    "text": "Estado: exploratorio, completado en noviembre de 2026. Los resultados describen el comportamiento de una implementación específica de Pythia 2.8B y no prueban inteligencia, conciencia ni los constructos provisionales de Inheritance o Resurgence.\nModelo y entorno registrados: EleutherAI/pythia-2.8b, GPTNeoXTokenizerFast, float32, atención eager, CUDA 12.8, GPU NVIDIA RTX 5080 Laptop; Python 3.12.10, PyTorch 2.7.1+cu128, Transformers 4.57.6 y Tokenizers 0.22.2. La revisión del modelo registrada fue 2a259cdd96a4beb1cdf467512e3904197345f6a9."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-1-variabilidad-bajo-contexto-breve",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-1-variabilidad-bajo-contexto-breve",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "Ejercicio 1: variabilidad bajo contexto breve",
+    "text": "Ejercicio 1: variabilidad bajo contexto breve\nSe generaron 3.600 continuaciones de 60 dichos artificiales en inglés, con 30 repeticiones por dicho sin prefijo y 30 con el prefijo This is an artificial saying., a temperatura 1.\n\nLa entropía del primer token disminuyó en 54 de 60 dichos; reducción media 0,995 bits.\nEn los primeros ocho pasos, disminuyó en 58 de 60 dichos; reducción media 0,906 bits, entre los casos que alcanzaron el paso ocho.\nLa entropía empírica de cadenas completas alcanzó su máximo muestral en 117 de 120 combinaciones, por lo que tiene capacidad discriminativa limitada con este tamaño de muestra.\n\nInterpretación prudente: un contexto breve modifica de manera sistemática la distribución predictiva inicial en este conjunto de estímulos. No se infiere que exista una representación semántica específica a partir de este dato solamente."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-2-asimetría-direccional",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-2-asimetría-direccional",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "Ejercicio 2: asimetría direccional",
+    "text": "Ejercicio 2: asimetría direccional\nSe puntuaron 76 pares de oraciones adyacentes provenientes de 28 soñantes. En cada par, A precedía a B en el relato original. Se comparó log P(B|A) − log P(A|B).\n\nDiferencia positiva en 40 de 76 pares.\nEn 66 de 74 pares de longitud desigual, la log-probabilidad total favoreció al objetivo más corto.\nLa normalización por token cambió el signo del contraste en 29 pares.\nIntervalo exploratorio del 95 % para la media total, mediante remuestreo por soñante: −1,96 a +11,68 nats; para la media por token: −0,054 a +0,412 nats/token.\n\nInterpretación prudente: no se ha establecido una ventaja global concluyente del orden narrativo original. La longitud de la secuencia objetivo es un factor de confusión importante y exige informar medidas totales y por token."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-3-anomalías-de-un-token",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#ejercicio-3-anomalías-de-un-token",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "Ejercicio 3: anomalías de un token",
+    "text": "Ejercicio 3: anomalías de un token\nSe evaluaron 32 contrastes, construidos a partir de 24 oraciones de 15 soñantes. Cada contraste sustituyó exactamente un token y mantuvo la longitud total.\n\n\n\n\n\n\n\n\n\nTipo\nΔ surprisal en token editado (bits)\nΔ posterior (bits)\nΔ oración completa (bits)\n\n\n\n\nSintáctica\n+11,10\n+1,69\n+12,79\n\n\nSemántica\n+6,09\n+9,02\n+15,11\n\n\nLógica\n+0,61\n+0,14\n+0,74\n\n\n\nLos aumentos en el token editado se observaron en 8/8 contrastes sintácticos, 8/8 semánticos y 6/8 lógicos. Los ítems lógicos se resumieron promediando sus dos orientaciones.\nInterpretación prudente: las perturbaciones sintácticas y semánticas parecen diferir en cómo distribuyen el costo probabilístico entre el punto editado y los tokens posteriores; estos resultados requieren replicación."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#archivos-de-evidencia-y-límites-de-publicación",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#archivos-de-evidencia-y-límites-de-publicación",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "Archivos de evidencia y límites de publicación",
+    "text": "Archivos de evidencia y límites de publicación\nEl registro experimental original menciona forced_sayings_nc3_prepared.csv, pairs_reviewed.csv, anomaly_pairs_reviewed.csv, manifiestos, tablas y puntuaciones por token. Estos datos no se incluyen aquí: su procedencia, licencia y presencia de texto humano deben revisarse antes de publicar.\nFuente interna: Avance experimental con Pythia: resultados de tres ejercicios exploratorios y propuesta de ajuste fino, versión 1.2, 9 de noviembre de 2026. Esta página es un resumen descriptivo, no una publicación revisada por pares."
+  },
+  {
+    "objectID": "thesis/experiments/pythia-2026-exploratory.html#próximo-experimento-propuesto",
+    "href": "thesis/experiments/pythia-2026-exploratory.html#próximo-experimento-propuesto",
+    "title": "Pythia 2.8B: tres ejercicios exploratorios (2026)",
+    "section": "Próximo experimento propuesto",
+    "text": "Próximo experimento propuesto\nComparar el mismo checkpoint inicial con dos ajustes finos: oraciones en orden original frente a las mismas oraciones permutadas dentro del relato. Particionar entrenamiento, validación y prueba por soñante antes de preparar las condiciones. Variable principal propuesta: diferencia de surprisal de la misma oración objetivo después de contexto adyacente frente a contexto no adyacente del mismo relato, controlando longitud y otras características pertinentes. Este estudio no figura como ejecutado."
   },
   {
     "objectID": "thesis/index.html",
