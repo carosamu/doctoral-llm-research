@@ -19,6 +19,7 @@ website:
   page-navigation: true
   bread-crumbs: true
   back-to-top-navigation: true
+
   navbar:
     background: primary
     search: true
@@ -30,21 +31,37 @@ website:
       - text: Thesis
         href: thesis/index.qmd
       - text: Experiments
-        href: thesis/experiments/index.qmd
+        menu:
+          - text: Overview
+            href: thesis/experiments/index.qmd
+          - text: Pythia - Exploratory Results 2026
+            href: thesis/experiments/pythia-2026-exploratory.qmd
+          - text: Ordered vs. Shuffled Fine-tuning
+            href: thesis/experiments/ordered-vs-shuffled-finetuning.qmd
       - text: Models
         href: thesis/models/index.qmd
       - text: Corpora
         href: thesis/corpora/index.qmd
       - text: Results
         href: thesis/results/index.qmd
+      - text: Laboratory
+        menu:
+          - text: Model Comparison
+            href: thesis/protocols/model-comparison.qmd
+          - text: Pythia Experimental Runner
+            href: docs/apps/experimental-runner.qmd
+          - text: Doctoral LLM Lab
+            href: docs/apps/doctoral-llm-lab.qmd
       - text: Publications
         href: publications/index.qmd
       - text: About
         href: about.qmd
+
     tools:
       - icon: github
         href: https://github.com/carosamu/doctoral-llm-research
         text: GitHub
+
   page-footer:
     left: "Claudio de la Rosa · Universidad El Bosque"
     right: "Construido con [Quarto](https://quarto.org/)"
